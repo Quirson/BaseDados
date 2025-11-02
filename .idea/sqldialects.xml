@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/04_indices_performance.sql" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/scripts/01_setup_procedures.sql" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/scripts/02_setup_views.sql" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/scripts/03_setup_triggers.sql" dialect="Oracle" />
+  </component>
+</project>

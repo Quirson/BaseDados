@@ -1,0 +1,212 @@
+2025-11-01 18:59:59,317 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-01 18:59:59,318 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-01 18:59:59,365 - INC_Publicidade - INFO - [connect:39] - Conexão Oracle estabelecida com sucesso!
+2025-11-01 18:59:59,365 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-01 18:59:59,366 - INC_Publicidade - INFO - [start_application:548] - Iniciando Sistema de Gestão de Publicidade...
+2025-11-01 18:59:59,366 - INC_Publicidade - INFO - [start_application:549] - Conexão Oracle: localhost:1521/XEPDB1
+2025-11-01 18:59:59,634 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_interface
+2025-11-01 18:59:59,634 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_sidebar
+2025-11-01 18:59:59,674 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 18:59:59,675 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 18:59:59,675 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 18:59:59,675 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 18:59:59,675 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 18:59:59,675 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 18:59:59,835 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_sidebar
+2025-11-01 18:59:59,835 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_header
+2025-11-01 18:59:59,874 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_header
+2025-11-01 18:59:59,874 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_main_content
+2025-11-01 18:59:59,875 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_main_content
+2025-11-01 18:59:59,875 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_interface
+2025-11-01 18:59:59,875 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 18:59:59,875 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 18:59:59,875 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:11,780 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-01 19:00:11,828 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:11,828 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:00:11,829 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:11,829 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:11,850 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:00:11,850 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:12,015 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:12,015 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:00:12,016 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:12,016 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:12,020 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-01 19:00:12,020 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:12,021 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-01 19:00:13,677 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-01 19:00:13,772 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:13,772 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:00:13,772 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:13,772 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:13,773 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:00:13,773 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:13,942 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:13,942 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:00:13,942 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:13,942 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:13,943 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-01 19:00:13,943 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:13,943 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-01 19:00:14,881 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-01 19:00:14,980 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:14,981 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:00:14,981 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:14,981 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:14,983 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:00:14,984 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:15,173 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:15,173 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:00:15,173 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:15,173 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:15,174 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-01 19:00:15,174 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:15,174 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-01 19:00:18,617 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-01 19:00:18,644 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-01 19:00:18,700 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-01 19:00:18,700 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_anunciantes_table
+2025-11-01 19:00:18,728 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-01 19:00:18,733 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-01 19:00:18,733 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_anunciantes_table
+2025-11-01 19:00:18,733 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-01 19:00:18,733 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:18,734 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-01 19:00:18,734 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:18,734 - INC_Publicidade - INFO - [load_data:156] - Carregados 5 anunciantes
+2025-11-01 19:00:20,754 - INC_Publicidade - ERROR - [wrapper:81] - Erro em show_campanhas: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+2025-11-01 19:00:20,755 - INC_Publicidade - ERROR - [wrapper:82] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 79, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 487, in show_campanhas
+    self._show_placeholder("Campanhas", "📢")
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 515, in _show_placeholder
+    placeholder.place(relx=0.5, rely=0.5, anchor="center", width=400, height=300)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/.venv/lib/python3.10/site-packages/customtkinter/windows/widgets/core_widget_classes/ctk_base_class.py", line 272, in place
+    raise ValueError("'width' and 'height' arguments must be passed to the constructor of the widget, not the place method")
+ValueError: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+
+2025-11-01 19:00:22,366 - INC_Publicidade - ERROR - [wrapper:81] - Erro em show_pecas: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+2025-11-01 19:00:22,367 - INC_Publicidade - ERROR - [wrapper:82] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 79, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 493, in show_pecas
+    self._show_placeholder("Peças Criativas", "🎨")
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 515, in _show_placeholder
+    placeholder.place(relx=0.5, rely=0.5, anchor="center", width=400, height=300)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/.venv/lib/python3.10/site-packages/customtkinter/windows/widgets/core_widget_classes/ctk_base_class.py", line 272, in place
+    raise ValueError("'width' and 'height' arguments must be passed to the constructor of the widget, not the place method")
+ValueError: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+
+2025-11-01 19:00:23,204 - INC_Publicidade - ERROR - [wrapper:81] - Erro em show_espacos: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+2025-11-01 19:00:23,204 - INC_Publicidade - ERROR - [wrapper:82] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 79, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 499, in show_espacos
+    self._show_placeholder("Espaços Publicitários", "📺")
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 515, in _show_placeholder
+    placeholder.place(relx=0.5, rely=0.5, anchor="center", width=400, height=300)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/.venv/lib/python3.10/site-packages/customtkinter/windows/widgets/core_widget_classes/ctk_base_class.py", line 272, in place
+    raise ValueError("'width' and 'height' arguments must be passed to the constructor of the widget, not the place method")
+ValueError: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+
+2025-11-01 19:00:23,842 - INC_Publicidade - ERROR - [wrapper:81] - Erro em show_pagamentos: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+2025-11-01 19:00:23,842 - INC_Publicidade - ERROR - [wrapper:82] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 79, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 505, in show_pagamentos
+    self._show_placeholder("Pagamentos", "💳")
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 515, in _show_placeholder
+    placeholder.place(relx=0.5, rely=0.5, anchor="center", width=400, height=300)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/.venv/lib/python3.10/site-packages/customtkinter/windows/widgets/core_widget_classes/ctk_base_class.py", line 272, in place
+    raise ValueError("'width' and 'height' arguments must be passed to the constructor of the widget, not the place method")
+ValueError: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+
+2025-11-01 19:00:24,345 - INC_Publicidade - ERROR - [wrapper:81] - Erro em show_relatorios: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+2025-11-01 19:00:24,346 - INC_Publicidade - ERROR - [wrapper:82] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 79, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 511, in show_relatorios
+    self._show_placeholder("Relatórios", "📊")
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 515, in _show_placeholder
+    placeholder.place(relx=0.5, rely=0.5, anchor="center", width=400, height=300)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/.venv/lib/python3.10/site-packages/customtkinter/windows/widgets/core_widget_classes/ctk_base_class.py", line 272, in place
+    raise ValueError("'width' and 'height' arguments must be passed to the constructor of the widget, not the place method")
+ValueError: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+
+2025-11-01 19:00:24,784 - INC_Publicidade - ERROR - [wrapper:81] - Erro em show_pagamentos: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+2025-11-01 19:00:24,784 - INC_Publicidade - ERROR - [wrapper:82] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 79, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 505, in show_pagamentos
+    self._show_placeholder("Pagamentos", "💳")
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 515, in _show_placeholder
+    placeholder.place(relx=0.5, rely=0.5, anchor="center", width=400, height=300)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/.venv/lib/python3.10/site-packages/customtkinter/windows/widgets/core_widget_classes/ctk_base_class.py", line 272, in place
+    raise ValueError("'width' and 'height' arguments must be passed to the constructor of the widget, not the place method")
+ValueError: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+
+2025-11-01 19:00:25,190 - INC_Publicidade - ERROR - [wrapper:81] - Erro em show_pecas: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+2025-11-01 19:00:25,190 - INC_Publicidade - ERROR - [wrapper:82] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 79, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 493, in show_pecas
+    self._show_placeholder("Peças Criativas", "🎨")
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 515, in _show_placeholder
+    placeholder.place(relx=0.5, rely=0.5, anchor="center", width=400, height=300)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/.venv/lib/python3.10/site-packages/customtkinter/windows/widgets/core_widget_classes/ctk_base_class.py", line 272, in place
+    raise ValueError("'width' and 'height' arguments must be passed to the constructor of the widget, not the place method")
+ValueError: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+
+2025-11-01 19:00:26,013 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-01 19:00:26,051 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-01 19:00:26,119 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-01 19:00:26,119 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_anunciantes_table
+2025-11-01 19:00:26,156 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-01 19:00:26,164 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-01 19:00:26,164 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_anunciantes_table
+2025-11-01 19:00:26,164 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-01 19:00:26,164 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:26,165 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-01 19:00:26,165 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:26,165 - INC_Publicidade - INFO - [load_data:156] - Carregados 5 anunciantes
+2025-11-01 19:00:27,156 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-01 19:00:27,194 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-01 19:00:27,305 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-01 19:00:27,305 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_anunciantes_table
+2025-11-01 19:00:27,355 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-01 19:00:27,360 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-01 19:00:27,360 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_anunciantes_table
+2025-11-01 19:00:27,360 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-01 19:00:27,360 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:00:27,361 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-01 19:00:27,361 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:00:27,361 - INC_Publicidade - INFO - [load_data:156] - Carregados 5 anunciantes
+2025-11-01 19:06:15,037 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-01 19:06:15,110 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:06:15,110 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:06:15,110 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:06:15,110 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:06:15,111 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:06:15,111 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:06:15,278 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:06:15,278 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:06:15,278 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:06:15,279 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:06:15,279 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-01 19:06:15,279 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:06:15,279 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-01 19:06:21,713 - INC_Publicidade - ERROR - [wrapper:81] - Erro em show_campanhas: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+2025-11-01 19:06:21,713 - INC_Publicidade - ERROR - [wrapper:82] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 79, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 487, in show_campanhas
+    self._show_placeholder("Campanhas", "📢")
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 515, in _show_placeholder
+    placeholder.place(relx=0.5, rely=0.5, anchor="center", width=400, height=300)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/.venv/lib/python3.10/site-packages/customtkinter/windows/widgets/core_widget_classes/ctk_base_class.py", line 272, in place
+    raise ValueError("'width' and 'height' arguments must be passed to the constructor of the widget, not the place method")
+ValueError: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+
+2025-11-01 19:09:25,717 - INC_Publicidade - INFO - [close:106] - Conexão Oracle fechada

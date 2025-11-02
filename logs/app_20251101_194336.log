@@ -1,0 +1,26 @@
+2025-11-01 19:43:36,121 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-01 19:43:36,121 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-01 19:43:36,175 - INC_Publicidade - INFO - [connect:39] - Conexão Oracle estabelecida com sucesso!
+2025-11-01 19:43:36,175 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-01 19:43:36,178 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:43:36,179 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:43:36,179 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:43:36,179 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:43:36,183 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:43:36,183 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:43:36,187 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:43:36,187 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:43:36,187 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:43:36,187 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:43:36,188 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:43:36,188 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:43:36,188 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:43:36,190 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:43:36,190 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:43:36,190 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:43:36,192 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:43:36,193 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:43:36,193 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 19:43:36,197 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 19:43:36,197 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 19:43:36,202 - INC_Publicidade - INFO - [close:106] - Conexão Oracle fechada

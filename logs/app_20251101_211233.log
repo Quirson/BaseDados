@@ -1,0 +1,14 @@
+2025-11-01 21:12:33,398 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-01 21:12:33,398 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-01 21:12:33,449 - INC_Publicidade - INFO - [connect:39] - Conexão Oracle estabelecida com sucesso!
+2025-11-01 21:12:33,450 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-01 21:12:33,450 - INC_Publicidade - INFO - [start_application:569] - Iniciando Sistema de Gestão de Publicidade...
+2025-11-01 21:12:33,450 - INC_Publicidade - INFO - [start_application:570] - Conexão Oracle: localhost:1521/XEPDB1
+2025-11-01 21:12:33,717 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_interface
+2025-11-01 21:12:33,717 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_sidebar
+2025-11-01 21:12:33,785 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 21:12:33,785 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 21:12:33,786 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 21:12:33,786 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 21:12:33,786 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 21:12:33,786 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query

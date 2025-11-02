@@ -1,0 +1,52 @@
+2025-11-01 18:50:57,045 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-01 18:50:57,045 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-01 18:50:57,160 - INC_Publicidade - INFO - [connect:39] - Conexão Oracle estabelecida com sucesso!
+2025-11-01 18:50:57,160 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-01 18:50:57,161 - INC_Publicidade - INFO - [start_application:291] - Iniciando Sistema de Gestão de Publicidade...
+2025-11-01 18:50:57,378 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _setup_window
+2025-11-01 18:50:57,422 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _setup_window
+2025-11-01 18:50:57,422 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_interface
+2025-11-01 18:50:57,422 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_sidebar
+2025-11-01 18:50:57,462 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 18:50:57,464 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 18:50:57,465 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 18:50:57,465 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 18:50:57,465 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 18:50:57,465 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 18:50:57,588 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_sidebar
+2025-11-01 18:50:57,588 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_header
+2025-11-01 18:50:57,614 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_header
+2025-11-01 18:50:57,614 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_main_content
+2025-11-01 18:50:57,615 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_main_content
+2025-11-01 18:50:57,615 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_interface
+2025-11-01 18:50:57,615 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 18:50:57,615 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 18:50:57,615 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 18:50:57,615 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-01 18:50:57,643 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-01 18:51:10,395 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-01 18:51:10,443 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-01 18:51:11,740 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-01 18:51:11,769 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-01 18:51:11,827 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-01 18:51:11,827 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_anunciantes_table
+2025-11-01 18:51:11,855 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-01 18:51:11,861 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-01 18:51:11,861 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_anunciantes_table
+2025-11-01 18:51:11,861 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-01 18:51:11,861 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 18:51:11,880 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-01 18:51:11,880 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 18:51:11,881 - INC_Publicidade - INFO - [load_data:156] - Carregados 5 anunciantes
+2025-11-01 18:51:29,456 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-01 18:51:29,492 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-01 18:51:29,550 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-01 18:51:29,550 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_anunciantes_table
+2025-11-01 18:51:29,577 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-01 18:51:29,583 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-01 18:51:29,583 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_anunciantes_table
+2025-11-01 18:51:29,583 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-01 18:51:29,583 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 18:51:29,583 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-01 18:51:29,584 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 18:51:29,584 - INC_Publicidade - INFO - [load_data:156] - Carregados 5 anunciantes

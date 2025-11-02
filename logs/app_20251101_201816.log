@@ -1,0 +1,155 @@
+2025-11-01 20:18:16,040 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-01 20:18:16,041 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-01 20:18:16,107 - INC_Publicidade - INFO - [connect:39] - Conexão Oracle estabelecida com sucesso!
+2025-11-01 20:18:16,107 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-01 20:18:16,108 - INC_Publicidade - INFO - [start_application:568] - Iniciando Sistema de Gestão de Publicidade...
+2025-11-01 20:18:16,108 - INC_Publicidade - INFO - [start_application:569] - Conexão Oracle: localhost:1521/XEPDB1
+2025-11-01 20:18:16,373 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_interface
+2025-11-01 20:18:16,374 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_sidebar
+2025-11-01 20:18:16,419 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:16,420 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 20:18:16,420 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:16,420 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:16,420 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 20:18:16,420 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:16,553 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_sidebar
+2025-11-01 20:18:16,553 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_header
+2025-11-01 20:18:16,588 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_header
+2025-11-01 20:18:16,588 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_main_content
+2025-11-01 20:18:16,588 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_main_content
+2025-11-01 20:18:16,588 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_interface
+2025-11-01 20:18:16,589 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:16,589 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 20:18:16,589 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:24,364 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-01 20:18:24,419 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:24,420 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 20:18:24,420 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:24,420 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:24,421 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 20:18:24,421 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:24,583 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:24,583 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 20:18:24,583 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:24,583 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:24,584 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-01 20:18:24,584 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:24,584 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-01 20:18:27,158 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-01 20:18:27,234 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:27,235 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 20:18:27,235 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:27,235 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:27,235 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 20:18:27,235 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:27,401 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:27,402 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 20:18:27,402 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:27,402 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:27,402 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-01 20:18:27,402 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:27,402 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-01 20:18:31,357 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-01 20:18:31,383 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-01 20:18:31,437 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-01 20:18:31,438 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_anunciantes_table
+2025-11-01 20:18:31,469 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-01 20:18:31,474 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-01 20:18:31,474 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_anunciantes_table
+2025-11-01 20:18:31,474 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-01 20:18:31,474 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:31,484 - INC_Publicidade - ERROR - [execute_query:79] - Erro de banco de dados: ORA-00904: "TELEFONE": invalid identifier
+2025-11-01 20:18:31,485 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:35,175 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-01 20:18:35,197 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-01 20:18:35,254 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-01 20:18:35,254 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_campanhas_table
+2025-11-01 20:18:35,285 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-01 20:18:35,293 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-01 20:18:35,293 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_campanhas_table
+2025-11-01 20:18:35,293 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-01 20:18:35,293 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:35,299 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-01 20:18:35,299 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:38,567 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-01 20:18:38,594 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-01 20:18:38,650 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-01 20:18:38,650 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_anunciantes_table
+2025-11-01 20:18:38,677 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-01 20:18:38,682 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-01 20:18:38,682 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_anunciantes_table
+2025-11-01 20:18:38,682 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-01 20:18:38,682 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:38,683 - INC_Publicidade - ERROR - [execute_query:79] - Erro de banco de dados: ORA-00904: "TELEFONE": invalid identifier
+2025-11-01 20:18:38,684 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:39,876 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-01 20:18:39,910 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-01 20:18:39,967 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-01 20:18:39,967 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_campanhas_table
+2025-11-01 20:18:39,994 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-01 20:18:39,999 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-01 20:18:39,999 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_campanhas_table
+2025-11-01 20:18:39,999 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-01 20:18:39,999 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:40,000 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-01 20:18:40,000 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:43,079 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-01 20:18:43,080 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-01 20:18:43,080 - INC_Publicidade - ERROR - [wrapper:81] - Erro em show_pecas: 'PecasCRUD' object has no attribute 'load_data'
+2025-11-01 20:18:43,081 - INC_Publicidade - ERROR - [wrapper:82] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 79, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 500, in show_pecas
+    show_pecas_module(self.main_content, self.db, self)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/crud_pecas.py", line 29, in show_pecas_module
+    PecasCRUD(parent, db, main_app)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/crud_pecas.py", line 18, in __init__
+    self.load_data()
+AttributeError: 'PecasCRUD' object has no attribute 'load_data'
+
+2025-11-01 20:18:44,515 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-01 20:18:44,516 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-01 20:18:44,516 - INC_Publicidade - ERROR - [wrapper:81] - Erro em show_espacos: 'EspacosCRUD' object has no attribute 'load_data'
+2025-11-01 20:18:44,517 - INC_Publicidade - ERROR - [wrapper:82] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 79, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 511, in show_espacos
+    show_espacos_module(self.main_content, self.db, self)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/crud_espacos.py", line 30, in show_espacos_module
+    EspacosCRUD(parent, db, main_app)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/crud_espacos.py", line 19, in __init__
+    self.load_data()
+AttributeError: 'EspacosCRUD' object has no attribute 'load_data'
+
+2025-11-01 20:18:45,092 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-01 20:18:45,093 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-01 20:18:45,093 - INC_Publicidade - ERROR - [wrapper:81] - Erro em show_pagamentos: 'PagamentosCRUD' object has no attribute 'load_data'
+2025-11-01 20:18:45,094 - INC_Publicidade - ERROR - [wrapper:82] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 79, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 522, in show_pagamentos
+    show_pagamentos_module(self.main_content, self.db, self)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/crud_pagamentos.py", line 30, in show_pagamentos_module
+    PagamentosCRUD(parent, db, main_app)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/crud_pagamentos.py", line 19, in __init__
+    self.load_data()
+AttributeError: 'PagamentosCRUD' object has no attribute 'load_data'
+
+2025-11-01 20:18:45,861 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:45,861 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 20:18:45,862 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:48,311 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-01 20:18:48,378 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:48,379 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 20:18:48,379 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:48,379 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:48,379 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 20:18:48,379 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:48,544 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:48,545 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-01 20:18:48,545 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:48,545 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-01 20:18:48,545 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-01 20:18:48,545 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-01 20:18:48,546 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-01 20:19:05,427 - INC_Publicidade - INFO - [close:106] - Conexão Oracle fechada
