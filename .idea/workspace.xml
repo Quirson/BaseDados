@@ -5,21 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db32f6ae-34a9-485e-9d56-a81b2dc64073" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/relatorios_avancados.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/05_setup_sequencias.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/funcoes.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/oracle_search_objects.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search_advanced_fixed.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search_engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search_integration.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search_widget.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/38102960-6a98-43ea-8fcf-69d53c5b68c9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38102960-6a98-43ea-8fcf-69d53c5b68c9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/38102960-6a98-43ea-8fcf-69d53c5b68c9/storage_v2/_src_/schema/GESTAO_PUBLICIDADE.rHes7w.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38102960-6a98-43ea-8fcf-69d53c5b68c9/storage_v2/_src_/schema/GESTAO_PUBLICIDADE.rHes7w.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_indices_performance.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_indices_performance.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crud_anunciantes.py" beforeDir="false" afterPath="$PROJECT_DIR$/crud_anunciantes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crud_campanhas.py" beforeDir="false" afterPath="$PROJECT_DIR$/crud_campanhas.py" afterDir="false" />
@@ -117,6 +109,7 @@
       <workItem from="1762024647116" duration="178000" />
       <workItem from="1762102367506" duration="18621000" />
       <workItem from="1762159953914" duration="6893000" />
+      <workItem from="1762170944699" duration="340000" />
     </task>
     <servers />
   </component>
