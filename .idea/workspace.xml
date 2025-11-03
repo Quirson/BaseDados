@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db32f6ae-34a9-485e-9d56-a81b2dc64073" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38102960-6a98-43ea-8fcf-69d53c5b68c9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38102960-6a98-43ea-8fcf-69d53c5b68c9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38102960-6a98-43ea-8fcf-69d53c5b68c9/storage_v2/_src_/schema/GESTAO_PUBLICIDADE.rHes7w.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38102960-6a98-43ea-8fcf-69d53c5b68c9/storage_v2/_src_/schema/GESTAO_PUBLICIDADE.rHes7w.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_indices_performance.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crud_anunciantes.py" beforeDir="false" afterPath="$PROJECT_DIR$/crud_anunciantes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crud_campanhas.py" beforeDir="false" afterPath="$PROJECT_DIR$/crud_campanhas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crud_espacos.py" beforeDir="false" afterPath="$PROJECT_DIR$/crud_espacos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crud_pagamentos.py" beforeDir="false" afterPath="$PROJECT_DIR$/crud_pagamentos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crud_validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/crud_validators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/01_procedures_profissionais.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/02_triggers_auditoria.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/03_views_relatorios.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/validators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +93,7 @@
       <workItem from="1762024647116" duration="178000" />
       <workItem from="1762102367506" duration="18621000" />
       <workItem from="1762159953914" duration="6893000" />
-      <workItem from="1762170944699" duration="340000" />
+      <workItem from="1762170944699" duration="977000" />
     </task>
     <servers />
   </component>

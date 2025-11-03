@@ -248,7 +248,7 @@ class AnunciantesCRUD:
         row += 1
 
         # Classificação Confidencial (ComboBox com constraint real)
-        label = ctk.CTkLabel(form_frame, text="Classificação Confidencial:*",
+        label = ctk.CTkLabel(form_frame, text="Classificação de Confiabilidade:*",
                              font=("Arial", 12, "bold"), text_color=COLORS['text_primary'])
         label.grid(row=row, column=0, padx=20, pady=10, sticky="w")
         fields['classif'] = ctk.CTkComboBox(
