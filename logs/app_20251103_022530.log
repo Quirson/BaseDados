@@ -1,0 +1,53 @@
+2025-11-03 02:25:30,198 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-03 02:25:30,198 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-03 02:25:30,289 - INC_Publicidade - INFO - [connect:39] - Conexão Oracle estabelecida com sucesso!
+2025-11-03 02:25:30,290 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-03 02:25:30,290 - INC_Publicidade - INFO - [start_application:632] - Iniciando Sistema de Gestão de Publicidade...
+2025-11-03 02:25:30,290 - INC_Publicidade - INFO - [start_application:633] - Conexão Oracle: localhost:1521/XEPDB1
+2025-11-03 02:25:30,503 - INC_Publicidade - INFO - [__init__:27] - SearchEngine inicializado
+2025-11-03 02:25:30,503 - INC_Publicidade - INFO - [integrar_pesquisa:21] - ✅ Motor de pesquisa inicializado com sucesso
+2025-11-03 02:25:30,503 - INC_Publicidade - INFO - [integrar_pesquisa:28] - ✅ Sistema de pesquisa integrado com sucesso
+2025-11-03 02:25:30,503 - INC_Publicidade - INFO - [__init__:151] - ✅ Sistema de pesquisa integrado
+2025-11-03 02:25:30,555 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_interface
+2025-11-03 02:25:30,556 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_sidebar
+2025-11-03 02:25:30,607 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 02:25:30,611 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 02:25:30,611 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 02:25:30,611 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 02:25:30,612 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 02:25:30,612 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 02:25:30,770 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_sidebar
+2025-11-03 02:25:30,770 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_header
+2025-11-03 02:25:30,811 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_header
+2025-11-03 02:25:30,811 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_main_content
+2025-11-03 02:25:30,812 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_main_content
+2025-11-03 02:25:30,812 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_interface
+2025-11-03 02:25:30,812 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 02:25:30,812 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 02:25:30,812 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 02:25:36,169 - INC_Publicidade - INFO - [adicionar_barra_pesquisa_dashboard:68] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 02:25:36,190 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 02:25:36,191 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 02:25:36,191 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 02:25:36,191 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 02:25:36,192 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 02:25:36,192 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 02:25:46,560 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-03 02:25:46,594 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-03 02:25:46,686 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-03 02:25:46,687 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_anunciantes_table
+2025-11-03 02:25:46,731 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-03 02:25:46,739 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-03 02:25:46,739 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_anunciantes_table
+2025-11-03 02:25:46,739 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-03 02:25:46,739 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 02:25:46,752 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-03 02:25:46,753 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 02:25:46,753 - INC_Publicidade - INFO - [load_data:149] - Carregados 5 anunciantes
+2025-11-03 02:28:37,216 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 02:28:37,247 - INC_Publicidade - ERROR - [execute_query:79] - Erro de banco de dados: ORA-01400: cannot insert NULL into ("GESTAO_PUBLICIDADE"."ANUNCIANTE_DADOS"."PREF_COM")
+2025-11-03 02:28:37,248 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 02:28:37,292 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 02:28:37,294 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-03 02:28:37,294 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 02:28:37,294 - INC_Publicidade - INFO - [load_data:149] - Carregados 5 anunciantes

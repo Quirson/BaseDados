@@ -20,7 +20,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from config import COLORS, FONTS, WINDOW_CONFIG
 from logger_config import app_logger, log_execution, safe_operation
 from database_oracle import db
-
+from dashboard_stats import DashboardStats
 ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("blue")
 
@@ -142,6 +142,16 @@ class MainApp(ctk.CTk):
         super().__init__()
         self.db = db
         self.logger = app_logger
+        self.stats_manager = DashboardStats(self.db)
+
+        # Integra sistema de pesquisa
+        try:
+            from search_integration import integrar_pesquisa
+            integrar_pesquisa(self)
+            self.logger.info("✅ Sistema de pesquisa integrado")
+        except Exception as e:
+            self.logger.warning(f"⚠️ Sistema de pesquisa não disponível: {e}")
+
         self._setup_window()
         self._create_interface()
         self._verify_connection()
@@ -196,6 +206,7 @@ class MainApp(ctk.CTk):
 
         menu_items = [
             ("🏠 Dashboard", self.show_dashboard),
+            ("🔍 Pesquisa Avançada", self.show_search_results),
             ("👥 Anunciantes", self.show_anunciantes),
             ("📢 Campanhas", self.show_campanhas),
             ("🎨 Peças Criativas", self.show_pecas),
@@ -293,7 +304,7 @@ class MainApp(ctk.CTk):
                 "• Oracle Database está rodando\n"
                 "• Credenciais corretas em config.py")
 
-    @log_execution
+    @safe_operation()
     def show_dashboard(self):
         """Dashboard com dados REAIS da Oracle"""
         self.clear_content()
@@ -301,6 +312,14 @@ class MainApp(ctk.CTk):
 
         container = ctk.CTkFrame(self.main_content, fg_color=COLORS['dark_bg'])
         container.pack(fill="both", expand=True, padx=20, pady=20)
+
+        # 🆕 ADICIONA BARRA DE PESQUISA
+        try:
+            if hasattr(self, 'search_engine') and self.search_engine:
+                from search_integration import adicionar_barra_pesquisa_dashboard
+                adicionar_barra_pesquisa_dashboard(self)
+        except Exception as e:
+            self.logger.warning(f"⚠️ Não foi possível adicionar barra de pesquisa: {e}")
 
         # Título
         title_frame = ctk.CTkFrame(container, fg_color="transparent")
@@ -316,61 +335,95 @@ class MainApp(ctk.CTk):
         # Cards de estatísticas COM DADOS REAIS
         self._create_stats_cards(container)
 
-        # Tabela de campanhas COM DADOS REAIS
+        # Tabela de campanhas
         self._create_campaigns_table(container)
 
+    @safe_operation()
+    @safe_operation()
+    @safe_operation()
+    def _get_real_stats(self):
+        """Busca estatísticas REAIS usando a VIEW criada"""
+        if not self.db.test_connection():
+            return self._get_fallback_stats()
+
+        try:
+            # Tenta usar a VIEW primeiro
+            result = self.db.execute_query("SELECT * FROM V_DASHBOARD_ESTATISTICAS")
+
+            if result and result[1]:
+                row = result[1][0]
+                return {
+                    'total_anunciantes': row[0] or 0,
+                    'total_campanhas': row[1] or 0,  # 🆕 MUDADO: Total de campanhas
+                    'orcamento_total': float(row[2]) if row[2] else 0,
+                    'espacos_disponiveis': row[3] or 0,
+                    'pecas_aprovadas': row[4] or 0,
+                    'pecas_rejeitadas': row[5] or 0,
+                    'total_pagamentos': row[6] or 0
+                }
+        except Exception as e:
+            self.logger.warning(f"VIEW V_DASHBOARD_ESTATISTICAS não disponível, usando query alternativa: {e}")
+
+            # Fallback para query original
+            try:
+                result = self.db.execute_query("""
+                                               SELECT (SELECT COUNT(*) FROM Anunciante_Dados)               as anunciantes,
+                                                      (SELECT COUNT(*) FROM Campanha_Dados)                 as total_campanhas, -- 🆕 TOTAL DE CAMPANHAS
+                                                      (SELECT NVL(SUM(Orc_alocado), 0) FROM Campanha_Dados) as orcamento_total, -- 🆕 SOMA DE TODAS CAMPANHAS
+                                                      (SELECT COUNT(*)
+                                                       FROM Espaco_Dados
+                                                       WHERE UPPER(DISPONIBILIDADE) = 'DISPONÍVEL')         as espacos
+                                               FROM DUAL
+                                               """)
+
+                if result and result[1]:
+                    row = result[1][0]
+                    return {
+                        'total_anunciantes': row[0] or 0,
+                        'total_campanhas': row[1] or 0,  # 🆕 TOTAL
+                        'orcamento_total': float(row[2]) if row[2] else 0,  # 🆕 SOMA TOTAL
+                        'espacos_disponiveis': row[3] or 0,
+                        'pecas_aprovadas': 0,
+                        'pecas_rejeitadas': 0,
+                        'total_pagamentos': 0
+                    }
+            except Exception as e2:
+                self.logger.error(f"Erro ao buscar estatísticas alternativas: {e2}")
+
+        return self._get_fallback_stats()
+
+    def _get_fallback_stats(self):
+        """Estatísticas de fallback"""
+        return {
+            'total_anunciantes': 0,
+            'campanhas_ativas': 0,
+            'orcamento_total': 0,
+            'espacos_disponiveis': 0,
+            'pecas_aprovadas': 0,
+            'pecas_rejeitadas': 0,
+            'total_pagamentos': 0
+        }
+
     def _create_stats_cards(self, parent):
-        """Cria cards com dados REAIS da Oracle"""
+        """Cria cards com dados REAIS incluindo novas estatísticas"""
         stats_frame = ctk.CTkFrame(parent, fg_color="transparent")
         stats_frame.pack(fill="x", pady=(0, 30))
 
         stats_data = self._get_real_stats()
 
         cards_info = [
-            ("📈", "Campanhas Ativas", stats_data['campanhas_ativas'], COLORS['accent']),
+            ("📊", "Total Campanhas", stats_data['total_campanhas'], COLORS['accent']),  # 🆕 MUDADO
             ("👥", "Anunciantes", stats_data['total_anunciantes'], COLORS['success']),
             ("💰", "Orçamento Total", f"MT {stats_data['orcamento_total']:,.0f}", COLORS['primary']),
             ("📺", "Espaços Disponíveis", stats_data['espacos_disponiveis'], COLORS['info']),
+            ("✅", "Peças Aprovadas", stats_data['pecas_aprovadas'], COLORS['success']),
+            ("❌", "Peças Rejeitadas", stats_data['pecas_rejeitadas'], COLORS['danger']),
         ]
 
         for i, (icon, title, value, color) in enumerate(cards_info):
-            card = StatCard(stats_frame, title, str(value), icon, color, width=220, height=110)
-            card.grid(row=0, column=i, padx=10, pady=5, sticky="nsew")
+            card = StatCard(stats_frame, title, str(value), icon, color, width=200, height=110)
+            card.grid(row=0, column=i, padx=5, pady=5, sticky="nsew")
             stats_frame.grid_columnconfigure(i, weight=1)
-
-    @safe_operation()
-    def _get_real_stats(self):
-        """Busca estatísticas REAIS da base de dados"""
-        if not self.db.test_connection():
-            return {
-                'total_anunciantes': 5,
-                'campanhas_ativas': 3,
-                'orcamento_total': 1500000,
-                'espacos_disponiveis': 3
-            }
-
-        try:
-            result = self.db.execute_query("""
-                SELECT 
-                    (SELECT COUNT(*) FROM Anunciante_Dados) as anunciantes,
-                    (SELECT COUNT(*) FROM Campanha_Dados WHERE Data_termino >= SYSDATE) as ativas,
-                    (SELECT NVL(SUM(Orc_alocado), 0) FROM Campanha_Dados WHERE Data_termino >= SYSDATE) as orcamento,
-                    (SELECT COUNT(*) FROM Espaco_Dados WHERE Status_disp = 'Disponível') as espacos
-                FROM DUAL
-            """)
-
-            if result and result[1]:
-                row = result[1][0]
-                return {
-                    'total_anunciantes': row[0] or 0,
-                    'campanhas_ativas': row[1] or 0,
-                    'orcamento_total': float(row[2]) if row[2] else 0,
-                    'espacos_disponiveis': row[3] or 0
-                }
-        except Exception as e:
-            self.logger.error(f"Erro ao buscar estatísticas: {e}")
-
-        return {'total_anunciantes': 0, 'campanhas_ativas': 0, 'orcamento_total': 0, 'espacos_disponiveis': 0}
 
     def _create_campaigns_table(self, parent):
         """Cria tabela com campanhas REAIS"""
@@ -382,15 +435,10 @@ class MainApp(ctk.CTk):
 
         ctk.CTkLabel(
             header_frame,
-            text="📋 Campanhas em Andamento",
+            text="📋 Últimas Campanhas",  # 🆕 MUDADO O TÍTULO
             font=("Arial", 18, "bold"),
             text_color=COLORS['text_primary']
         ).pack(side="left")
-
-        table_container = ctk.CTkFrame(table_frame, fg_color="transparent")
-        table_container.pack(fill="both", expand=True, padx=20, pady=(0, 20))
-
-        self._create_real_treeview(table_container)
 
     def _create_real_treeview(self, parent):
         """Cria treeview com dados REAIS"""
@@ -430,26 +478,28 @@ class MainApp(ctk.CTk):
         parent.grid_rowconfigure(0, weight=1)
         parent.grid_columnconfigure(0, weight=1)
 
+    # 🆕 ADICIONAR MÉTODO NO main.py (classe MainApp)
+
     def _get_real_campaigns(self):
-        """Busca campanhas REAIS da base de dados"""
+        """Busca campanhas usando a VIEW v_campanhas_ativas"""
         if not self.db.test_connection():
             return [
                 ('800001', '5G Revolution', 'Vodacom', 'MT 500,000', '01/10/2024', '31/12/2024', '🟢 Ativa'),
-                ('800002', 'Verão Laurentina', 'Cervejas Moz', 'MT 300,000', '01/11/2024', '28/02/2025', '🟢 Ativa'),
             ]
 
         try:
+            # 🆕 USA A VIEW v_campanhas_ativas
             result = self.db.execute_query("""
-                SELECT c.Cod_camp, c.Titulo, a.Nome_razao_soc, 
-                       c.Orc_alocado, 
-                       TO_CHAR(c.Data_inicio, 'DD/MM/YYYY'),
-                       TO_CHAR(c.Data_termino, 'DD/MM/YYYY'),
-                       CASE WHEN c.Data_termino >= SYSDATE THEN '🟢 Ativa' ELSE '🔴 Finalizada' END
-                FROM Campanha_Dados c
-                JOIN Anunciante_Dados a ON c.Num_id_fiscal = a.Num_id_fiscal
-                WHERE c.Data_termino >= SYSDATE
-                ORDER BY c.Data_inicio DESC
-            """)
+                                           SELECT COD_CAMP,
+                                                  CAMPANHA_TITULO,
+                                                  ANUNCIANTE,
+                                                  ORC_ALOCADO,
+                                                  TO_CHAR(DATA_INICIO, 'DD/MM/YYYY'),
+                                                  TO_CHAR(DATA_TERMINO, 'DD/MM/YYYY'),
+                                                  '🟢 Ativa' AS STATUS
+                                           FROM v_campanhas_ativas
+                                           ORDER BY DATA_INICIO DESC
+                                           """)
 
             if result and result[1]:
                 real_data = []
@@ -463,10 +513,11 @@ class MainApp(ctk.CTk):
                         row[5],
                         row[6]
                     ))
+                self.logger.info(f"✅ Usando VIEW v_campanhas_ativas: {len(real_data)} campanhas")
                 return real_data
 
         except Exception as e:
-            self.logger.error(f"Erro ao buscar campanhas: {e}")
+            self.logger.error(f"Erro ao buscar campanhas da VIEW: {e}")
 
         return []
 
@@ -526,10 +577,27 @@ class MainApp(ctk.CTk):
             self._show_placeholder("Pagamentos", "💳")
 
     @safe_operation()
+    @safe_operation()
+    # No método show_relatorios, mantenha apenas:
+    @safe_operation()
     def show_relatorios(self):
         self.clear_content()
         self.page_title.configure(text="Relatórios e Analytics")
-        self._show_placeholder("Relatórios", "📊")
+        try:
+            from relatorios_avancados import show_relatorios_module
+            show_relatorios_module(self.main_content, self.db, self)
+        except ImportError as e:
+            self.logger.error(f"Erro ao carregar módulo de relatórios: {e}")
+            self._show_placeholder("Relatórios", "📊")
+
+    def show_search_results(self):
+        """Mostra tela de pesquisa avançada"""
+        try:
+            from search_integration import show_search_results_view
+            show_search_results_view(self)
+        except Exception as e:
+            self.logger.error(f"Erro ao mostrar pesquisa: {e}")
+            messagebox.showerror("Erro", "Sistema de pesquisa não disponível")
 
     def _show_placeholder(self, module_name, icon):
         placeholder = ctk.CTkFrame(self.main_content, fg_color=COLORS['dark_card'], corner_radius=12, width=400, height=300)

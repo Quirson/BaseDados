@@ -1,0 +1,38 @@
+2025-11-02 23:08:28,865 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-02 23:08:28,866 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-02 23:08:28,922 - INC_Publicidade - INFO - [connect:39] - Conexão Oracle estabelecida com sucesso!
+2025-11-02 23:08:28,922 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-02 23:08:28,923 - INC_Publicidade - INFO - [start_application:569] - Iniciando Sistema de Gestão de Publicidade...
+2025-11-02 23:08:28,923 - INC_Publicidade - INFO - [start_application:570] - Conexão Oracle: localhost:1521/XEPDB1
+2025-11-02 23:08:29,185 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_interface
+2025-11-02 23:08:29,186 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_sidebar
+2025-11-02 23:08:29,226 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:08:29,228 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-02 23:08:29,228 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:08:29,228 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:08:29,229 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-02 23:08:29,229 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:08:29,378 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_sidebar
+2025-11-02 23:08:29,378 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_header
+2025-11-02 23:08:29,413 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_header
+2025-11-02 23:08:29,413 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_main_content
+2025-11-02 23:08:29,413 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_main_content
+2025-11-02 23:08:29,413 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_interface
+2025-11-02 23:08:29,413 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:08:29,414 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-02 23:08:29,414 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:08:34,683 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-02 23:08:34,744 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:08:34,744 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-02 23:08:34,744 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:08:34,744 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:08:34,747 - INC_Publicidade - ERROR - [execute_query:79] - Erro de banco de dados: ORA-00904: "STATUS_DISP": invalid identifier
+2025-11-02 23:08:34,748 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:08:34,933 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:08:34,934 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-02 23:08:34,934 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:08:34,934 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:08:34,935 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-02 23:08:34,935 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:08:34,935 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-02 23:11:38,235 - INC_Publicidade - INFO - [close:106] - Conexão Oracle fechada

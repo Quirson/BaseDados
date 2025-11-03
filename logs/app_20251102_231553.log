@@ -1,0 +1,38 @@
+2025-11-02 23:15:53,004 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-02 23:15:53,004 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-02 23:15:53,061 - INC_Publicidade - INFO - [connect:39] - Conexão Oracle estabelecida com sucesso!
+2025-11-02 23:15:53,061 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-02 23:15:53,062 - INC_Publicidade - INFO - [start_application:569] - Iniciando Sistema de Gestão de Publicidade...
+2025-11-02 23:15:53,062 - INC_Publicidade - INFO - [start_application:570] - Conexão Oracle: localhost:1521/XEPDB1
+2025-11-02 23:15:53,318 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_interface
+2025-11-02 23:15:53,318 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_sidebar
+2025-11-02 23:15:53,359 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:15:53,359 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-02 23:15:53,359 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:15:53,360 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:15:53,360 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-02 23:15:53,360 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:15:53,500 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_sidebar
+2025-11-02 23:15:53,500 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_header
+2025-11-02 23:15:53,538 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_header
+2025-11-02 23:15:53,538 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_main_content
+2025-11-02 23:15:53,539 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_main_content
+2025-11-02 23:15:53,539 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_interface
+2025-11-02 23:15:53,539 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:15:53,539 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-02 23:15:53,540 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:15:58,438 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-02 23:15:58,490 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:15:58,491 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-02 23:15:58,491 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:15:58,491 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:15:58,492 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-02 23:15:58,492 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:15:58,681 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:15:58,682 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-02 23:15:58,682 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:15:58,682 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:15:58,683 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-02 23:15:58,683 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:15:58,683 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-02 23:16:20,995 - INC_Publicidade - INFO - [close:106] - Conexão Oracle fechada

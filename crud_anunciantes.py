@@ -4,6 +4,7 @@ MÓDULO ANUNCIANTES - CRUD COMPLETO COM VALIDAÇÃO SÓLIDA
 
 import customtkinter as ctk
 from tkinter import messagebox, ttk
+from tkinter import ttk, messagebox
 from logger_config import log_execution, safe_operation, app_logger
 from config import COLORS
 from crud_validators import CRUDValidator, ValidationError
@@ -199,43 +200,88 @@ class AnunciantesCRUD:
         fields = {}
         row = 0
 
-        if mode == 'create':
-            self.create_form_field(form_frame, "NIF (Número de ID Fiscal):*", row, 'fiscal', fields, width=250)
-            row += 1
-        else:
-            self.create_form_field(form_frame, "NIF:*", row, 'fiscal', fields, width=250, readonly=True)
-            row += 1
-
+        # Nome/Razão Social
         self.create_form_field(form_frame, "Nome/Razão Social:*", row, 'nome', fields, width=500)
         row += 1
 
-        label = ctk.CTkLabel(form_frame, text="Categoria de Negócio:*", font=("Arial", 12, "bold"), text_color=COLORS['text_primary'])
+        # Categoria de Negócio
+        label = ctk.CTkLabel(form_frame, text="Categoria de Negócio:*",
+                             font=("Arial", 12, "bold"), text_color=COLORS['text_primary'])
         label.grid(row=row, column=0, padx=20, pady=10, sticky="w")
-        fields['categoria'] = ctk.CTkComboBox(form_frame, values=['Telecomunicações', 'Varejo', 'Alimentação', 'Saúde', 'Educação', 'Tecnologia', 'Outro'], width=350, height=35)
+        fields['categoria'] = ctk.CTkComboBox(
+            form_frame,
+            values=['Telecomunicações', 'Varejo', 'Alimentação', 'Saúde', 'Educação', 'Tecnologia', 'Outro'],
+            width=350,
+            height=35
+        )
         fields['categoria'].grid(row=row, column=1, padx=20, pady=10, sticky="w")
         row += 1
 
-        self.create_form_field(form_frame, "Porte da Empresa:*", row, 'porte', fields, width=250)
+        # Porte da Empresa (ComboBox)
+        label = ctk.CTkLabel(form_frame, text="Porte da Empresa:*",
+                             font=("Arial", 12, "bold"), text_color=COLORS['text_primary'])
+        label.grid(row=row, column=0, padx=20, pady=10, sticky="w")
+        fields['porte'] = ctk.CTkComboBox(
+            form_frame,
+            values=['Pequeno', 'Médio', 'Grande'],
+            width=250,
+            height=35
+        )
+        fields['porte'].set('Médio')  # Valor padrão
+        fields['porte'].grid(row=row, column=1, padx=20, pady=10, sticky="w")
         row += 1
 
+        # Endereço
         self.create_form_field(form_frame, "Endereço:*", row, 'endereco', fields, width=500)
         row += 1
 
+        # Contactos
         self.create_form_field(form_frame, "Contactos (Tel/Email):*", row, 'contactos', fields, width=350)
         row += 1
 
+        # Representante Legal
         self.create_form_field(form_frame, "Representante Legal:*", row, 'rep_legal', fields, width=350)
         row += 1
 
+        # Limite de Crédito
         self.create_form_field(form_frame, "Limite de Crédito Aprovado (MT):*", row, 'limite', fields, width=300)
         row += 1
 
-        label = ctk.CTkLabel(form_frame, text="Classificação Confidencial:*", font=("Arial", 12, "bold"), text_color=COLORS['text_primary'])
+        # Classificação Confidencial (ComboBox com constraint real)
+        label = ctk.CTkLabel(form_frame, text="Classificação Confidencial:*",
+                             font=("Arial", 12, "bold"), text_color=COLORS['text_primary'])
         label.grid(row=row, column=0, padx=20, pady=10, sticky="w")
-        fields['classif'] = ctk.CTkComboBox(form_frame, values=['Confidencial', 'Público', 'Interno'], width=250, height=35)
+        fields['classif'] = ctk.CTkComboBox(
+            form_frame,
+            values=[
+                'AAA - Excelente',
+                'AA - Muito Bom',
+                'A - Bom',
+                'B - Regular',
+                'C - Baixo'
+            ],
+            width=250,
+            height=35
+        )
+        fields['classif'].set('A - Bom')  # Valor padrão
         fields['classif'].grid(row=row, column=1, padx=20, pady=10, sticky="w")
         row += 1
 
+        # Preferência de Comunicação
+        label = ctk.CTkLabel(form_frame, text="Preferência de Comunicação:*",
+                             font=("Arial", 12, "bold"), text_color=COLORS['text_primary'])
+        label.grid(row=row, column=0, padx=20, pady=10, sticky="w")
+        fields['pref_com'] = ctk.CTkComboBox(
+            form_frame,
+            values=['Email', 'Telefone', 'SMS', 'Presencial'],
+            width=250,
+            height=35
+        )
+        fields['pref_com'].set('Email')  # Valor padrão
+        fields['pref_com'].grid(row=row, column=1, padx=20, pady=10, sticky="w")
+        row += 1
+
+        # Botões de ação
         btn_frame = ctk.CTkFrame(form_frame, fg_color="transparent")
         btn_frame.grid(row=row, column=0, columnspan=2, pady=30)
 
@@ -261,6 +307,7 @@ class AnunciantesCRUD:
         )
         cancel_btn.pack(side="left", padx=10)
 
+        # Carregar dados no modo edição
         if mode == 'edit' and fiscal:
             self.load_form_data(fields, fiscal)
 
@@ -305,7 +352,7 @@ class AnunciantesCRUD:
         """Salva com validação sólida antes de inserir na BD"""
         try:
             data = {
-                'fiscal': fields.get('fiscal').get() if fields.get('fiscal').cget('state') != 'disabled' else fiscal,
+                'fiscal': fiscal,  # vem do parâmetro da função (None no modo create)
                 'nome': fields['nome'].get(),
                 'categoria': fields['categoria'].get(),
                 'porte': fields['porte'].get(),
@@ -313,21 +360,20 @@ class AnunciantesCRUD:
                 'contactos': fields['contactos'].get(),
                 'rep_legal': fields['rep_legal'].get(),
                 'limite': fields['limite'].get(),
-                'classif': fields['classif'].get()
+                'classif': fields['classif'].get(),
+                'pref_com': fields['pref_com'].get()
             }
-
             CRUDValidator.validate_anunciante(data)
 
             if mode == 'create':
                 query = """
-                INSERT INTO Anunciante_Dados 
-                (Num_id_fiscal, Nome_razao_soc, Cat_negocio, Porte, Endereco, 
-                 Contactos, Rep_legal, Lim_cred_aprov, Classif_conf)
-                VALUES (:fiscal, :nome, :categoria, :porte, :endereco, 
-                        :contactos, :rep_legal, :limite, :classif)
-                """
+                        INSERT INTO Anunciante_Dados
+                        (Num_id_fiscal, Nome_razao_soc, Cat_negocio, Porte, Endereco,
+                         Contactos, Rep_legal, Lim_cred_aprov, Classif_conf, PREF_COM) -- 🆕 ADICIONADO PREF_COM
+                        VALUES (seq_anunciante.NEXTVAL, :nome, :categoria, :porte, :endereco,
+                                :contactos, :rep_legal, :limite, :classif, :pref_com) -- 🆕 ADICIONADO :pref_com \
+                        """
                 params = {
-                    'fiscal': int(data['fiscal']),
                     'nome': data['nome'],
                     'categoria': data['categoria'],
                     'porte': data['porte'],
@@ -335,19 +381,26 @@ class AnunciantesCRUD:
                     'contactos': data['contactos'],
                     'rep_legal': data['rep_legal'],
                     'limite': float(data['limite']),
-                    'classif': data['classif']
+                    'classif': data['classif'],
+                    'pref_com': data['pref_com']  # 🆕 ADICIONADO
                 }
                 result = self.db.execute_query(query, params, fetch=False)
                 if result:
                     messagebox.showinfo("Sucesso", "Anunciante criado com sucesso!")
             else:
                 query = """
-                UPDATE Anunciante_Dados
-                SET Nome_razao_soc = :nome, Cat_negocio = :categoria, Porte = :porte,
-                    Endereco = :endereco, Contactos = :contactos, Rep_legal = :rep_legal,
-                    Lim_cred_aprov = :limite, Classif_conf = :classif
-                WHERE Num_id_fiscal = :fiscal
-                """
+                        UPDATE Anunciante_Dados
+                        SET Nome_razao_soc = :nome, \
+                            Cat_negocio    = :categoria, \
+                            Porte          = :porte,
+                            Endereco       = :endereco, \
+                            Contactos      = :contactos, \
+                            Rep_legal      = :rep_legal,
+                            Lim_cred_aprov = :limite, \
+                            Classif_conf   = :classif, \
+                            PREF_COM       = :pref_com -- 🆕 ADICIONADO
+                        WHERE Num_id_fiscal = :fiscal \
+                        """
                 params = {
                     'fiscal': fiscal,
                     'nome': data['nome'],
@@ -357,7 +410,8 @@ class AnunciantesCRUD:
                     'contactos': data['contactos'],
                     'rep_legal': data['rep_legal'],
                     'limite': float(data['limite']),
-                    'classif': data['classif']
+                    'classif': data['classif'],
+                    'pref_com': data['pref_com']  # 🆕 ADICIONADO
                 }
                 result = self.db.execute_query(query, params, fetch=False)
                 if result:

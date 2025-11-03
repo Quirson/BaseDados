@@ -276,14 +276,17 @@ class CampanhasCRUD:
             CRUDValidator.validate_campanha(data)
 
             if mode == 'create':
-                query_max = "SELECT NVL(MAX(Cod_camp), 8000000) + 1 FROM Campanha_dados"
-                result = self.db.execute_query(query_max)
+                # 🆕 USA SEQUENCE EM VEZ DE MAX()+1
+                query_cod = "SELECT seq_campanha.NEXTVAL FROM DUAL"
+                result = self.db.execute_query(query_cod)
                 novo_cod = result[1][0][0] if result and result[1] else 8000001
 
                 query = """
-                INSERT INTO Campanha_dados (Cod_camp, Num_id_fiscal, Titulo, Objectivo, Pub_alvo, Orc_alocado, Data_inicio, Data_termino)
-                VALUES (:cod, :fiscal, :titulo, :obj, :pub, :orc, TO_DATE(:dt_ini, 'DD/MM/YYYY'), TO_DATE(:dt_fim, 'DD/MM/YYYY'))
-                """
+                        INSERT INTO Campanha_dados (Cod_camp, Num_id_fiscal, Titulo, Objectivo, Pub_alvo, Orc_alocado, \
+                                                    Data_inicio, Data_termino)
+                        VALUES (:cod, :fiscal, :titulo, :obj, :pub, :orc, TO_DATE(:dt_ini, 'DD/MM/YYYY'), \
+                                TO_DATE(:dt_fim, 'DD/MM/YYYY')) \
+                        """
                 params = {
                     'cod': novo_cod,
                     'fiscal': data['anunciante'],
@@ -295,7 +298,7 @@ class CampanhasCRUD:
                     'dt_fim': data['data_termino']
                 }
                 self.db.execute_query(query, params, fetch=False)
-                messagebox.showinfo("Sucesso", "Campanha criada com sucesso!")
+                messagebox.showinfo("Sucesso", f"✅ Campanha criada com ID: {novo_cod}")
             else:
                 query = """
                 UPDATE Campanha_dados SET Num_id_fiscal = :fiscal, Titulo = :titulo, Objectivo = :obj,

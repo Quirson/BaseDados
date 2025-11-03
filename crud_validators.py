@@ -1,6 +1,6 @@
 """
 MÓDULO CENTRALIZADO DE VALIDAÇÃO - REGRAS DE NEGÓCIO SÓLIDAS
-Todas as validações de dados passam por aqui antes de inserir na BD
+VERSÃO CORRIGIDA - CAMPOS CORRETOS
 """
 
 import re
@@ -14,56 +14,75 @@ class ValidationError(Exception):
 
 
 class CRUDValidator:
-    """Validador centralizado para todos os CRUDs"""
-
-    # Padrões regex
-    EMAIL_PATTERN = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-    PHONE_PATTERN = r'^(\+258|0)[1-9]\d{7,8}$'
-    FISCAL_PATTERN = r'^\d{12}$'
+    """Validador centralizado para todos os CRUDs - VERSÃO CORRIGIDA"""
 
     @staticmethod
     def validate_anunciante(data):
-        """Valida dados de anunciante"""
+        """Valida dados de anunciante - versão compatível com constraint Oracle"""
         errors = []
 
         # Nome/Razão Social
         nome = data.get('nome', '').strip()
         if not nome or len(nome) < 3:
-            errors.append("Nome deve ter pelo menos 3 caracteres")
-        if len(nome) > 200:
-            errors.append("Nome não pode exceder 200 caracteres")
-
-        # Número de identificação fiscal
-        fiscal = data.get('fiscal', '').strip()
-        if not fiscal or not re.match(CRUDValidator.FISCAL_PATTERN, fiscal):
-            errors.append("NIF deve conter 12 dígitos numéricos")
+            errors.append("Nome deve ter pelo menos 3 caracteres.")
 
         # Categoria de negócio
         categoria = data.get('categoria', '').strip()
-        categorias_validas = ['Tecnologia', 'Varejo', 'Alimentação', 'Saúde', 'Educação', 'Outro']
+        categorias_validas = [
+            'Telecomunicações', 'Varejo', 'Alimentação',
+            'Saúde', 'Educação', 'Tecnologia', 'Outro'
+        ]
         if not categoria or categoria not in categorias_validas:
-            errors.append(f"Categoria inválida. Válidas: {', '.join(categorias_validas)}")
+            errors.append(f"Categoria inválida. Valores válidos: {', '.join(categorias_validas)}.")
 
-        # Email
-        email = data.get('email', '').strip()
-        if email and not re.match(CRUDValidator.EMAIL_PATTERN, email):
-            errors.append("Email inválido")
+        # Porte da empresa
+        porte = data.get('porte', '').strip()
+        portes_validos = ['Pequeno', 'Médio', 'Grande']
+        if not porte or porte not in portes_validos:
+            errors.append(f"Porte inválido. Valores válidos: {', '.join(portes_validos)}.")
 
-        # Telefone
-        telefone = data.get('telefone', '').strip()
-        if telefone and not re.match(CRUDValidator.PHONE_PATTERN, telefone):
-            errors.append("Telefone inválido (formato: +258... ou 0...)")
+        # Endereço
+        endereco = data.get('endereco', '').strip()
+        if not endereco:
+            errors.append("Endereço é obrigatório.")
+
+        # Contactos
+        contactos = data.get('contactos', '').strip()
+        if not contactos:
+            errors.append("Contactos são obrigatórios.")
+
+        # Representante Legal
+        rep_legal = data.get('rep_legal', '').strip()
+        if not rep_legal:
+            errors.append("Representante legal é obrigatório.")
 
         # Limite de crédito
         try:
             limite = float(data.get('limite', 0))
             if limite < 0:
-                errors.append("Limite de crédito não pode ser negativo")
-            if limite > 10000000:
-                errors.append("Limite de crédito excede o máximo permitido")
+                errors.append("Limite de crédito não pode ser negativo.")
         except:
-            errors.append("Limite de crédito deve ser numérico")
+            errors.append("Limite de crédito deve ser um número válido.")
 
+        # Classificação confidencial (respeitando constraint Oracle)
+        classif = data.get('classif', '').strip()
+        classif_validas = [
+            'AAA - Excelente',
+            'AA - Muito Bom',
+            'A - Bom',
+            'B - Regular',
+            'C - Baixo'
+        ]
+        if not classif or classif not in classif_validas:
+            errors.append(f"Classificação inválida. Valores válidos: {', '.join(classif_validas)}.")
+
+        # Preferência de comunicação
+        pref_com = data.get('pref_com', '').strip()
+        prefs_validas = ['Email', 'Telefone', 'SMS', 'Presencial']
+        if not pref_com or pref_com not in prefs_validas:
+            errors.append(f"Preferência de comunicação inválida. Valores válidos: {', '.join(prefs_validas)}.")
+
+        # Resultado final
         if errors:
             raise ValidationError("\n".join(errors))
 
@@ -71,15 +90,13 @@ class CRUDValidator:
 
     @staticmethod
     def validate_campanha(data):
-        """Valida dados de campanha"""
+        """Valida dados de campanha - VERSÃO CORRIGIDA"""
         errors = []
 
         # Título
         titulo = data.get('titulo', '').strip()
         if not titulo or len(titulo) < 3:
             errors.append("Título deve ter pelo menos 3 caracteres")
-        if len(titulo) > 150:
-            errors.append("Título não pode exceder 150 caracteres")
 
         # Objetivo
         objectivo = data.get('objectivo', '').strip()
@@ -96,8 +113,6 @@ class CRUDValidator:
             orc = float(data.get('orc_alocado', 0))
             if orc <= 0:
                 errors.append("Orçamento deve ser maior que zero")
-            if orc > 100000000:
-                errors.append("Orçamento excede o máximo permitido")
         except:
             errors.append("Orçamento deve ser numérico")
 
@@ -108,15 +123,8 @@ class CRUDValidator:
 
             if data_termino <= data_inicio:
                 errors.append("Data de término deve ser posterior à data de início")
-
-            if (data_termino - data_inicio).days > 365:
-                errors.append("Campanha não pode durar mais de 365 dias")
         except:
             errors.append("Datas inválidas. Use formato DD/MM/YYYY")
-
-        # Anunciante
-        if not data.get('anunciante'):
-            errors.append("Selecione um anunciante")
 
         if errors:
             raise ValidationError("\n".join(errors))
@@ -125,7 +133,7 @@ class CRUDValidator:
 
     @staticmethod
     def validate_espaco(data):
-        """Valida dados de espaço"""
+        """Valida dados de espaço - VERSÃO CORRIGIDA"""
         errors = []
 
         # Localização
@@ -133,37 +141,40 @@ class CRUDValidator:
         if not local or len(local) < 3:
             errors.append("Localização deve ter pelo menos 3 caracteres")
 
-        # Tipo
+        # Tipo - VALORES CORRETOS
         tipo = data.get('tipo', '').strip()
-        tipos_validos = ['Billboard', 'Painel Digital', 'Rádio', 'TV', 'Jornal', 'Online']
+        tipos_validos = ['Painel Digital', 'Espaco em Aplicativo', 'Banner em Site']
         if not tipo or tipo not in tipos_validos:
             errors.append(f"Tipo inválido. Válidos: {', '.join(tipos_validos)}")
 
         # Dimensões
         dimensoes = data.get('dimensoes', '').strip()
-        if not dimensoes or len(dimensoes) < 2:
-            errors.append("Dimensões inválidas")
+        if not dimensoes:
+            errors.append("Dimensões são obrigatórias")
 
-        # Preço base
+        # Preço base - CAMPO CORRETO
         try:
-            preco = float(data.get('preco', 0))
+            preco = float(data.get('preco_base', 0))
             if preco <= 0:
                 errors.append("Preço deve ser maior que zero")
-            if preco > 500000:
-                errors.append("Preço excede o máximo permitido")
         except:
             errors.append("Preço deve ser numérico")
 
-        # Disponibilidade
+        # Visibilidade
+        visibilidade = data.get('visibilidade', '').strip()
+        if not visibilidade:
+            errors.append("Visibilidade é obrigatória")
+
+        # Disponibilidade - VALORES CORRETOS
         disponibilidade = data.get('disponibilidade', '')
-        valores_validos = ['Disponível', 'Ocupado', 'Manutenção', 'Sempre Disponível']
+        valores_validos = ['Disponível', 'Indisponível', 'Em Manutenção']
         if not disponibilidade or disponibilidade not in valores_validos:
             errors.append(f"Disponibilidade inválida. Válidas: {', '.join(valores_validos)}")
 
         # Proprietário
         proprietario = data.get('proprietario', '').strip()
-        if not proprietario or len(proprietario) < 3:
-            errors.append("Proprietário deve ter pelo menos 3 caracteres")
+        if not proprietario:
+            errors.append("Proprietário é obrigatório")
 
         if errors:
             raise ValidationError("\n".join(errors))
@@ -172,7 +183,7 @@ class CRUDValidator:
 
     @staticmethod
     def validate_peca(data):
-        """Valida dados de peça criativa"""
+        """Valida dados de peça criativa - VERSÃO SIMPLIFICADA"""
         errors = []
 
         # Título
@@ -185,20 +196,24 @@ class CRUDValidator:
         if not descricao or len(descricao) < 10:
             errors.append("Descrição deve ter pelo menos 10 caracteres")
 
-        # Tipo
-        tipo = data.get('tipo', '').strip()
-        tipos_validos = ['Anúncio', 'Banner', 'Spot', 'Cartaz', 'Outro']
-        if not tipo or tipo not in tipos_validos:
-            errors.append(f"Tipo inválido. Válidos: {', '.join(tipos_validos)}")
+        # Criador
+        criador = data.get('criador', '').strip()
+        if not criador:
+            errors.append("Criador é obrigatório")
 
-        # Formato
-        formato = data.get('formato', '').strip()
-        if not formato or len(formato) < 2:
-            errors.append("Formato inválido")
+        # Status - VALORES CORRETOS
+        status = data.get('status', '').strip()
+        status_validos = ['Pendente', 'Aprovado', 'Rejeitado', 'Em Revisão']
+        if not status or status not in status_validos:
+            errors.append(f"Status inválido. Válidos: {', '.join(status_validos)}")
 
-        # Campanha
-        if not data.get('campanha'):
-            errors.append("Selecione uma campanha")
+        # Classificação
+        try:
+            classif = int(data.get('classif', 0))
+            if classif < 0 or classif > 18:
+                errors.append("Classificação deve ser entre 0 e 18")
+        except:
+            errors.append("Classificação deve ser numérica (0-18)")
 
         if errors:
             raise ValidationError("\n".join(errors))
@@ -207,42 +222,35 @@ class CRUDValidator:
 
     @staticmethod
     def validate_pagamento(data):
-        """Valida dados de pagamento"""
+        """Valida dados de pagamento - VERSÃO CORRIGIDA"""
         errors = []
 
-        # Valor
+        # Preço dinâmico - CAMPO CORRETO
         try:
-            valor = float(data.get('valor', 0))
+            valor = float(data.get('preco_dinam', 0))
             if valor <= 0:
                 errors.append("Valor deve ser maior que zero")
-            if valor > 10000000:
-                errors.append("Valor excede o máximo permitido")
         except:
             errors.append("Valor deve ser numérico")
 
-        # Método
+        # Método - VALORES CORRETOS
         metodo = data.get('metodo', '').strip()
-        metodos_validos = ['Transferência', 'Cheque', 'Dinheiro', 'Cartão']
+        metodos_validos = ['Transferência Bancária', 'Dinheiro', 'Cheque', 'Cartão de Crédito', 'Outra']
         if not metodo or metodo not in metodos_validos:
             errors.append(f"Método inválido. Válidos: {', '.join(metodos_validos)}")
 
-        # Status
-        status = data.get('status', '').strip()
-        status_validos = ['Pendente', 'Confirmado', 'Cancelado']
-        if not status or status not in status_validos:
-            errors.append(f"Status inválido. Válidos: {', '.join(status_validos)}")
-
-        # Campanha
-        if not data.get('campanha'):
-            errors.append("Selecione uma campanha")
-
-        # Data
-        try:
-            datetime.strptime(data.get('data_pagamento', ''), '%d/%m/%Y')
-        except:
-            errors.append("Data inválida. Use formato DD/MM/YYYY")
+        # Reconciliação - VALORES CORRETOS
+        reconc = data.get('reconc', '').strip()
+        status_validos = ['Pendente', 'Conciliado', 'Não Conciliado', 'Em Revisão']
+        if not reconc or reconc not in status_validos:
+            errors.append(f"Reconciliação inválida. Válidas: {', '.join(status_validos)}")
 
         if errors:
             raise ValidationError("\n".join(errors))
 
         return True
+
+    @staticmethod
+    def validate_anunciante_sem_fiscal(data):
+        """Valida dados de anunciante para CRIAÇÃO (sem NIF)"""
+        return CRUDValidator.validate_anunciante(data)

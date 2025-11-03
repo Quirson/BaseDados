@@ -1,0 +1,144 @@
+2025-11-03 00:24:20,847 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-03 00:24:20,847 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-03 00:24:20,904 - INC_Publicidade - INFO - [connect:39] - Conexão Oracle estabelecida com sucesso!
+2025-11-03 00:24:20,904 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-03 00:24:20,905 - INC_Publicidade - INFO - [start_application:602] - Iniciando Sistema de Gestão de Publicidade...
+2025-11-03 00:24:20,905 - INC_Publicidade - INFO - [start_application:603] - Conexão Oracle: localhost:1521/XEPDB1
+2025-11-03 00:24:21,121 - INC_Publicidade - INFO - [__init__:27] - SearchEngine inicializado
+2025-11-03 00:24:21,121 - INC_Publicidade - INFO - [integrar_pesquisa:24] - ✅ Motor de pesquisa inicializado com sucesso
+2025-11-03 00:24:21,121 - INC_Publicidade - INFO - [integrar_pesquisa:52] - ✅ Sistema de pesquisa integrado com sucesso
+2025-11-03 00:24:21,121 - INC_Publicidade - INFO - [__init__:150] - ✅ Sistema de pesquisa integrado
+2025-11-03 00:24:21,170 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_interface
+2025-11-03 00:24:21,170 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_sidebar
+2025-11-03 00:24:21,209 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:21,211 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:24:21,211 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:21,211 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:21,211 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:24:21,211 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:21,370 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_sidebar
+2025-11-03 00:24:21,370 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_header
+2025-11-03 00:24:21,410 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_header
+2025-11-03 00:24:21,410 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_main_content
+2025-11-03 00:24:21,410 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_main_content
+2025-11-03 00:24:21,410 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_interface
+2025-11-03 00:24:21,410 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:21,411 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:24:21,411 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:26,283 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-03 00:24:26,283 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-03 00:24:26,396 - INC_Publicidade - INFO - [show_dashboard:332] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 00:24:26,417 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:26,418 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:24:26,418 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:26,418 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:26,419 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:24:26,419 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:26,596 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:26,597 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:24:26,597 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:26,597 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:26,597 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-03 00:24:26,598 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:26,598 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-03 00:24:26,598 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-03 00:24:26,651 - INC_Publicidade - INFO - [adicionar_barra_pesquisa:89] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 00:24:33,767 - INC_Publicidade - WARNING - [_registrar_pesquisa:352] - Erro ao registrar pesquisa no log: 'OracleDatabase' object has no attribute 'execute_dml'
+2025-11-03 00:24:33,767 - INC_Publicidade - INFO - [pesquisa_global:99] - Pesquisa global: 'BCI - Banco Comercial' - 0 resultados
+2025-11-03 00:24:34,054 - INC_Publicidade - INFO - [display_search_results:295] - ✅ Exibidos 0 resultados para 'BCI - Banco Comercial'
+2025-11-03 00:24:39,611 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-03 00:24:39,611 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-03 00:24:39,733 - INC_Publicidade - INFO - [show_dashboard:332] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 00:24:39,753 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:39,753 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:24:39,754 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:39,754 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:39,754 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:24:39,754 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:39,911 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:39,912 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:24:39,912 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:39,912 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:39,912 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-03 00:24:39,912 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:39,913 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-03 00:24:39,913 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-03 00:24:39,960 - INC_Publicidade - INFO - [adicionar_barra_pesquisa:89] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 00:24:49,954 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-03 00:24:49,994 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-03 00:24:50,082 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-03 00:24:50,082 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_anunciantes_table
+2025-11-03 00:24:50,111 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-03 00:24:50,116 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-03 00:24:50,116 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_anunciantes_table
+2025-11-03 00:24:50,116 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-03 00:24:50,116 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:50,117 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-03 00:24:50,117 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:50,117 - INC_Publicidade - INFO - [load_data:149] - Carregados 5 anunciantes
+2025-11-03 00:24:53,083 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-03 00:24:53,115 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-03 00:24:53,185 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-03 00:24:53,185 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_campanhas_table
+2025-11-03 00:24:53,217 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-03 00:24:53,223 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-03 00:24:53,223 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_campanhas_table
+2025-11-03 00:24:53,223 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-03 00:24:53,223 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:53,224 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-03 00:24:53,225 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:53,225 - INC_Publicidade - INFO - [load_data:123] - Carregadas 5 campanhas
+2025-11-03 00:24:55,922 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-03 00:24:55,922 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-03 00:24:56,067 - INC_Publicidade - INFO - [show_dashboard:332] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 00:24:56,091 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:56,092 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:24:56,092 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:56,092 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:56,092 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:24:56,092 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:56,253 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:56,254 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:24:56,254 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:56,254 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:24:56,254 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-03 00:24:56,254 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:24:56,255 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-03 00:24:56,255 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-03 00:24:56,303 - INC_Publicidade - INFO - [adicionar_barra_pesquisa:89] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 00:25:04,089 - INC_Publicidade - WARNING - [_registrar_pesquisa:352] - Erro ao registrar pesquisa no log: 'OracleDatabase' object has no attribute 'execute_dml'
+2025-11-03 00:25:04,089 - INC_Publicidade - INFO - [pesquisa_global:99] - Pesquisa global: 'BCI - Banco Comercial' - 0 resultados
+2025-11-03 00:25:04,367 - INC_Publicidade - INFO - [display_search_results:295] - ✅ Exibidos 0 resultados para 'BCI - Banco Comercial'
+2025-11-03 00:25:14,604 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-03 00:25:14,639 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-03 00:25:14,708 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-03 00:25:14,708 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_anunciantes_table
+2025-11-03 00:25:14,740 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-03 00:25:14,746 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-03 00:25:14,746 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_anunciantes_table
+2025-11-03 00:25:14,746 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-03 00:25:14,746 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:25:14,747 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-03 00:25:14,747 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:25:14,747 - INC_Publicidade - INFO - [load_data:149] - Carregados 5 anunciantes
+2025-11-03 00:25:16,940 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-03 00:25:16,940 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-03 00:25:17,083 - INC_Publicidade - INFO - [show_dashboard:332] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 00:25:17,107 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:25:17,107 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:25:17,107 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:25:17,107 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:25:17,108 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:25:17,108 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:25:17,268 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:25:17,268 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:25:17,268 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:25:17,269 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:25:17,269 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-03 00:25:17,269 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:25:17,270 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-03 00:25:17,270 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-03 00:25:17,315 - INC_Publicidade - INFO - [adicionar_barra_pesquisa:89] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 00:25:25,329 - INC_Publicidade - WARNING - [_registrar_pesquisa:352] - Erro ao registrar pesquisa no log: 'OracleDatabase' object has no attribute 'execute_dml'
+2025-11-03 00:25:25,330 - INC_Publicidade - INFO - [pesquisa_global:99] - Pesquisa global: 'Anunciantes' - 0 resultados
+2025-11-03 00:25:25,658 - INC_Publicidade - INFO - [display_search_results:295] - ✅ Exibidos 0 resultados para 'Anunciantes'

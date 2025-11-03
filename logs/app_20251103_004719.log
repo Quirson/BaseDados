@@ -1,0 +1,43 @@
+2025-11-03 00:47:19,674 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-03 00:47:19,674 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-03 00:47:19,725 - INC_Publicidade - INFO - [connect:39] - Conexão Oracle estabelecida com sucesso!
+2025-11-03 00:47:19,726 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-03 00:47:19,727 - INC_Publicidade - INFO - [start_application:629] - Iniciando Sistema de Gestão de Publicidade...
+2025-11-03 00:47:19,727 - INC_Publicidade - INFO - [start_application:630] - Conexão Oracle: localhost:1521/XEPDB1
+2025-11-03 00:47:19,944 - INC_Publicidade - INFO - [__init__:27] - SearchEngine inicializado
+2025-11-03 00:47:19,944 - INC_Publicidade - INFO - [integrar_pesquisa:20] - ✅ Motor de pesquisa inicializado com sucesso
+2025-11-03 00:47:19,945 - INC_Publicidade - INFO - [integrar_pesquisa:27] - ✅ Sistema de pesquisa integrado com sucesso
+2025-11-03 00:47:19,945 - INC_Publicidade - INFO - [__init__:150] - ✅ Sistema de pesquisa integrado
+2025-11-03 00:47:19,992 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_interface
+2025-11-03 00:47:19,992 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_sidebar
+2025-11-03 00:47:20,037 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:47:20,038 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:47:20,038 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:47:20,038 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:47:20,039 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:47:20,039 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:47:20,093 - INC_Publicidade - ERROR - [wrapper:64] - Erro em _create_sidebar: '_tkinter.tkapp' object has no attribute 'show_search_results'
+2025-11-03 00:47:20,095 - INC_Publicidade - ERROR - [wrapper:65] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 60, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 209, in _create_sidebar
+    ("🔍 Pesquisa Avançada", self.show_search_results),  # 🆕 ADICIONE ESTA LINHA
+  File "/usr/lib/python3.10/tkinter/__init__.py", line 2383, in __getattr__
+    return getattr(self.tk, attr)
+AttributeError: '_tkinter.tkapp' object has no attribute 'show_search_results'
+
+2025-11-03 00:47:20,095 - INC_Publicidade - ERROR - [wrapper:64] - Erro em _create_interface: '_tkinter.tkapp' object has no attribute 'show_search_results'
+2025-11-03 00:47:20,095 - INC_Publicidade - ERROR - [wrapper:65] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 60, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 175, in _create_interface
+    self._create_sidebar()
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 60, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/main.py", line 209, in _create_sidebar
+    ("🔍 Pesquisa Avançada", self.show_search_results),  # 🆕 ADICIONE ESTA LINHA
+  File "/usr/lib/python3.10/tkinter/__init__.py", line 2383, in __getattr__
+    return getattr(self.tk, attr)
+AttributeError: '_tkinter.tkapp' object has no attribute 'show_search_results'
+
+2025-11-03 00:47:20,095 - INC_Publicidade - ERROR - [<module>:644] - Erro fatal: '_tkinter.tkapp' object has no attribute 'show_search_results'

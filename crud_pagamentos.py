@@ -264,16 +264,12 @@ class PagamentosCRUD:
                 modalidade_id = int(data['modalidade'].split(" - ")[0])
 
             if mode == 'create':
-                query_max = "SELECT NVL(MAX(Cod_pagamento), 9000000) + 1 FROM Pagamentos"
-                result = self.db.execute_query(query_max)
-                novo_cod = result[1][0][0] if result and result[1] else 9000001
-
                 query = """
-                INSERT INTO Pagamentos (Cod_pagamento, Cod_modalidade, Precos_dinam, Metod_pagamento, Comprov_veic, Reconc_financ)
-                VALUES (:cod, :modalidade, :preco, :metodo, :comprov, :reconc)
-                """
+                        INSERT INTO Pagamentos (Cod_pagamento, Cod_modalidade, Precos_dinam, Metod_pagamento, \
+                                                Comprov_veic, Reconc_financ)
+                        VALUES (seq_pagamento.NEXTVAL, :modalidade, :preco, :metodo, :comprov, :reconc) \
+                        """
                 params = {
-                    'cod': novo_cod,
                     'modalidade': modalidade_id,
                     'preco': float(data['preco_dinam']),
                     'metodo': data['metodo'],
@@ -281,7 +277,7 @@ class PagamentosCRUD:
                     'reconc': data['reconc']
                 }
                 self.db.execute_query(query, params, fetch=False)
-                messagebox.showinfo("Sucesso", "Pagamento criado com sucesso!")
+                messagebox.showinfo("Sucesso", "✅ Pagamento criado com SEQUENCE!")
             else:
                 query = """
                 UPDATE Pagamentos SET Cod_modalidade = :modalidade, Precos_dinam = :preco,

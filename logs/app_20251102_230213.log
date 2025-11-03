@@ -1,0 +1,47 @@
+2025-11-02 23:02:13,700 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-02 23:02:13,700 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-02 23:02:13,752 - INC_Publicidade - INFO - [connect:39] - Conexão Oracle estabelecida com sucesso!
+2025-11-02 23:02:13,752 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-02 23:02:13,753 - INC_Publicidade - INFO - [start_application:569] - Iniciando Sistema de Gestão de Publicidade...
+2025-11-02 23:02:13,753 - INC_Publicidade - INFO - [start_application:570] - Conexão Oracle: localhost:1521/XEPDB1
+2025-11-02 23:02:14,017 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_interface
+2025-11-02 23:02:14,017 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_sidebar
+2025-11-02 23:02:14,063 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:02:14,064 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-02 23:02:14,064 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:02:14,064 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:02:14,065 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-02 23:02:14,065 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:02:14,219 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_sidebar
+2025-11-02 23:02:14,219 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_header
+2025-11-02 23:02:14,261 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_header
+2025-11-02 23:02:14,261 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_main_content
+2025-11-02 23:02:14,261 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_main_content
+2025-11-02 23:02:14,262 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_interface
+2025-11-02 23:02:14,262 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:02:14,262 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-02 23:02:14,262 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:02:22,321 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-02 23:02:22,367 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-02 23:02:22,425 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-02 23:02:22,426 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_anunciantes_table
+2025-11-02 23:02:22,455 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-02 23:02:22,460 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-02 23:02:22,460 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_anunciantes_table
+2025-11-02 23:02:22,460 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-02 23:02:22,460 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:02:22,461 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-02 23:02:22,462 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:02:22,462 - INC_Publicidade - INFO - [load_data:149] - Carregados 5 anunciantes
+2025-11-02 23:02:29,573 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-02 23:02:29,595 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-02 23:02:29,650 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-02 23:02:29,650 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_espacos_table
+2025-11-02 23:02:29,687 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-02 23:02:29,699 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-02 23:02:29,700 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_espacos_table
+2025-11-02 23:02:29,700 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-02 23:02:29,700 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-02 23:02:29,702 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-02 23:02:29,703 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-02 23:02:29,703 - INC_Publicidade - INFO - [load_data:125] - Carregados 5 espaços

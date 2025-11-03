@@ -2,9 +2,11 @@
 <project version="4">
   <component name="DataSourcePerFileMappings">
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/38102960-6a98-43ea-8fcf-69d53c5b68c9/console.sql" value="38102960-6a98-43ea-8fcf-69d53c5b68c9" />
-    <file url="file://$PROJECT_DIR$/04_indices_performance.sql" value="38102960-6a98-43ea-8fcf-69d53c5b68c9" />
     <file url="file://$PROJECT_DIR$/scripts/01_setup_procedures.sql" value="38102960-6a98-43ea-8fcf-69d53c5b68c9" />
     <file url="file://$PROJECT_DIR$/scripts/02_setup_views.sql" value="38102960-6a98-43ea-8fcf-69d53c5b68c9" />
     <file url="file://$PROJECT_DIR$/scripts/03_setup_triggers.sql" value="38102960-6a98-43ea-8fcf-69d53c5b68c9" />
+    <file url="file://$PROJECT_DIR$/scripts/Ordem_Introducao.sql" value="38102960-6a98-43ea-8fcf-69d53c5b68c9" />
+    <file url="file://$PROJECT_DIR$/scripts/funcoes.sql" value="38102960-6a98-43ea-8fcf-69d53c5b68c9" />
+    <file url="file://$PROJECT_DIR$/scripts/oracle_search_objects.sql" value="38102960-6a98-43ea-8fcf-69d53c5b68c9" />
   </component>
 </project>

@@ -1,0 +1,83 @@
+2025-11-03 00:03:24,008 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-03 00:03:24,008 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-03 00:03:24,068 - INC_Publicidade - INFO - [connect:39] - Conexão Oracle estabelecida com sucesso!
+2025-11-03 00:03:24,068 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-03 00:03:24,069 - INC_Publicidade - INFO - [start_application:580] - Iniciando Sistema de Gestão de Publicidade...
+2025-11-03 00:03:24,069 - INC_Publicidade - INFO - [start_application:581] - Conexão Oracle: localhost:1521/XEPDB1
+2025-11-03 00:03:24,308 - INC_Publicidade - INFO - [__init__:27] - SearchEngine inicializado
+2025-11-03 00:03:24,308 - INC_Publicidade - INFO - [integrar_pesquisa:24] - ✅ Motor de pesquisa inicializado com sucesso
+2025-11-03 00:03:24,308 - INC_Publicidade - INFO - [integrar_pesquisa:52] - ✅ Sistema de pesquisa integrado com sucesso
+2025-11-03 00:03:24,308 - INC_Publicidade - INFO - [__init__:150] - ✅ Sistema de pesquisa integrado
+2025-11-03 00:03:24,373 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_interface
+2025-11-03 00:03:24,373 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_sidebar
+2025-11-03 00:03:24,412 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:03:24,413 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:03:24,413 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:03:24,413 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:03:24,414 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:03:24,414 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:03:24,562 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_sidebar
+2025-11-03 00:03:24,562 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_header
+2025-11-03 00:03:24,598 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_header
+2025-11-03 00:03:24,598 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_main_content
+2025-11-03 00:03:24,599 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_main_content
+2025-11-03 00:03:24,599 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_interface
+2025-11-03 00:03:24,599 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:03:24,599 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:03:24,599 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:03:29,901 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-03 00:03:29,955 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:03:29,955 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:03:29,955 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:03:29,955 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:03:29,961 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:03:29,961 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:03:30,144 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:03:30,145 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:03:30,145 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:03:30,145 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:03:30,149 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-03 00:03:30,149 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:03:30,150 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-03 00:03:30,196 - INC_Publicidade - ERROR - [wrapper:81] - Erro em enhanced_show_dashboard: 'dark_hover'
+2025-11-03 00:03:30,204 - INC_Publicidade - ERROR - [wrapper:82] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 79, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/search_integration.py", line 41, in enhanced_show_dashboard
+    adicionar_barra_pesquisa(main_app_instance)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/search_integration.py", line 75, in adicionar_barra_pesquisa
+    search_bar = ModernSearchBar(
+  File "/home/ngalejunior/PycharmProjects/BaseDados/search_widget.py", line 40, in __init__
+    self._create_widgets(placeholder)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/search_widget.py", line 88, in _create_widgets
+    hover_color=COLORS['dark_hover'],
+KeyError: 'dark_hover'
+
+2025-11-03 00:03:51,310 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: show_dashboard
+2025-11-03 00:03:51,369 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:03:51,369 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:03:51,369 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:03:51,369 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:03:51,370 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:03:51,370 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:03:51,530 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:03:51,531 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 00:03:51,531 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:03:51,531 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 00:03:51,531 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-03 00:03:51,532 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 00:03:51,532 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: show_dashboard
+2025-11-03 00:03:51,572 - INC_Publicidade - ERROR - [wrapper:81] - Erro em enhanced_show_dashboard: 'dark_hover'
+2025-11-03 00:03:51,573 - INC_Publicidade - ERROR - [wrapper:82] - Traceback (most recent call last):
+  File "/home/ngalejunior/PycharmProjects/BaseDados/logger_config.py", line 79, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/search_integration.py", line 41, in enhanced_show_dashboard
+    adicionar_barra_pesquisa(main_app_instance)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/search_integration.py", line 75, in adicionar_barra_pesquisa
+    search_bar = ModernSearchBar(
+  File "/home/ngalejunior/PycharmProjects/BaseDados/search_widget.py", line 40, in __init__
+    self._create_widgets(placeholder)
+  File "/home/ngalejunior/PycharmProjects/BaseDados/search_widget.py", line 88, in _create_widgets
+    hover_color=COLORS['dark_hover'],
+KeyError: 'dark_hover'
+

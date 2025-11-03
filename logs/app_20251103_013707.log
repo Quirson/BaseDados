@@ -1,0 +1,111 @@
+2025-11-03 01:37:07,104 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-03 01:37:07,104 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-03 01:37:07,157 - INC_Publicidade - INFO - [connect:39] - Conexão Oracle estabelecida com sucesso!
+2025-11-03 01:37:07,157 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-03 01:37:07,158 - INC_Publicidade - INFO - [start_application:637] - Iniciando Sistema de Gestão de Publicidade...
+2025-11-03 01:37:07,159 - INC_Publicidade - INFO - [start_application:638] - Conexão Oracle: localhost:1521/XEPDB1
+2025-11-03 01:37:07,370 - INC_Publicidade - INFO - [__init__:27] - SearchEngine inicializado
+2025-11-03 01:37:07,370 - INC_Publicidade - INFO - [integrar_pesquisa:21] - ✅ Motor de pesquisa inicializado com sucesso
+2025-11-03 01:37:07,370 - INC_Publicidade - INFO - [integrar_pesquisa:28] - ✅ Sistema de pesquisa integrado com sucesso
+2025-11-03 01:37:07,370 - INC_Publicidade - INFO - [__init__:151] - ✅ Sistema de pesquisa integrado
+2025-11-03 01:37:07,418 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_interface
+2025-11-03 01:37:07,418 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_sidebar
+2025-11-03 01:37:07,466 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:37:07,467 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:37:07,467 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:37:07,467 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:37:07,467 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:37:07,467 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:37:07,614 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_sidebar
+2025-11-03 01:37:07,615 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_header
+2025-11-03 01:37:07,650 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_header
+2025-11-03 01:37:07,650 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_main_content
+2025-11-03 01:37:07,651 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_main_content
+2025-11-03 01:37:07,651 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_interface
+2025-11-03 01:37:07,651 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:37:07,651 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:37:07,651 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:37:16,586 - INC_Publicidade - INFO - [adicionar_barra_pesquisa_dashboard:68] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 01:37:16,607 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:37:16,607 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:37:16,607 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:37:16,607 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:37:16,608 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:37:16,608 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:37:16,824 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:37:16,825 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:37:16,825 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:37:16,825 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:37:16,825 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-03 01:37:16,826 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:37:38,221 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-03 01:37:38,253 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-03 01:37:38,374 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-03 01:37:38,374 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_espacos_table
+2025-11-03 01:37:38,428 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-03 01:37:38,435 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-03 01:37:38,435 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_espacos_table
+2025-11-03 01:37:38,435 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-03 01:37:38,436 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:37:38,437 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 5 linhas
+2025-11-03 01:37:38,437 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:37:38,437 - INC_Publicidade - INFO - [load_data:125] - Carregados 5 espaços
+2025-11-03 01:40:33,979 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_interface
+2025-11-03 01:40:34,020 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_toolbar
+2025-11-03 01:40:34,122 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_toolbar
+2025-11-03 01:40:34,122 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_pecas_table
+2025-11-03 01:40:34,159 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: create_treeview
+2025-11-03 01:40:34,168 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_treeview
+2025-11-03 01:40:34,168 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_pecas_table
+2025-11-03 01:40:34,168 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: create_interface
+2025-11-03 01:40:34,168 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:40:34,169 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 10 linhas
+2025-11-03 01:40:34,169 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:40:34,169 - INC_Publicidade - INFO - [load_data:126] - Carregadas 10 peças criativas
+2025-11-03 01:44:25,233 - INC_Publicidade - INFO - [adicionar_barra_pesquisa_dashboard:68] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 01:44:25,254 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:44:25,254 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:44:25,254 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:44:25,254 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:44:25,255 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:44:25,255 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:44:25,471 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:44:25,471 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:44:25,471 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:44:25,471 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:44:25,472 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-03 01:44:25,472 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:44:31,868 - INC_Publicidade - WARNING - [_registrar_pesquisa:352] - Erro ao registrar pesquisa no log: 'OracleDatabase' object has no attribute 'execute_dml'
+2025-11-03 01:44:31,868 - INC_Publicidade - INFO - [pesquisa_global:99] - Pesquisa global: 'Vodacom' - 1 resultados
+2025-11-03 01:44:32,275 - INC_Publicidade - INFO - [display_search_results:224] - ✅ Exibidos 1 resultados para 'Vodacom'
+2025-11-03 01:45:35,789 - INC_Publicidade - INFO - [adicionar_barra_pesquisa_dashboard:68] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 01:45:35,817 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:45:35,818 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:45:35,818 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:45:35,818 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:45:35,819 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:45:35,819 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:45:36,082 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:45:36,083 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:45:36,083 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:45:36,083 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:45:36,083 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-03 01:45:36,083 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:45:40,757 - INC_Publicidade - WARNING - [_registrar_pesquisa:352] - Erro ao registrar pesquisa no log: 'OracleDatabase' object has no attribute 'execute_dml'
+2025-11-03 01:45:40,757 - INC_Publicidade - INFO - [pesquisa_global:99] - Pesquisa global: '5G' - 4 resultados
+2025-11-03 01:45:41,301 - INC_Publicidade - INFO - [display_search_results:224] - ✅ Exibidos 4 resultados para '5G'
+2025-11-03 01:46:14,029 - INC_Publicidade - INFO - [adicionar_barra_pesquisa_dashboard:68] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 01:46:14,061 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:46:14,062 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:46:14,062 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:46:14,062 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:46:14,063 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:46:14,063 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:46:14,339 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:46:14,340 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 01:46:14,340 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:46:14,340 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 01:46:14,341 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 0 linhas
+2025-11-03 01:46:14,341 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 01:46:34,651 - INC_Publicidade - WARNING - [_registrar_pesquisa:352] - Erro ao registrar pesquisa no log: 'OracleDatabase' object has no attribute 'execute_dml'
+2025-11-03 01:46:34,651 - INC_Publicidade - INFO - [pesquisa_global:99] - Pesquisa global: 'Painel Digital' - 2 resultados

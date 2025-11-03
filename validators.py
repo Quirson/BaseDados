@@ -1,180 +1,270 @@
 """
-VALIDAÇÃO CENTRALIZADA DE DADOS
-Garante integridade de dados antes de operações com Oracle
+MÓDULO CENTRALIZADO DE VALIDAÇÃO - REGRAS DE NEGÓCIO SÓLIDAS
+Todas as validações de dados passam por aqui antes de inserir na BD
 """
 
 import re
-from typing import Tuple, Any, Optional
+from datetime import datetime
 from logger_config import app_logger
 
 
-class DataValidator:
-    """Classe para validar dados"""
-
-    logger = app_logger
-
-    @staticmethod
-    def validate_fiscal_id(value: str) -> Tuple[bool, str]:
-        """Valida número de identificação fiscal"""
-        if not value or not str(value).strip():
-            return False, "ID fiscal é obrigatório"
-
-        try:
-            fiscal_id = int(value)
-            if fiscal_id <= 0:
-                return False, "ID fiscal deve ser positivo"
-            if fiscal_id < 1000000 or fiscal_id > 9999999:
-                return False, "ID fiscal deve ter 7 dígitos"
-            return True, ""
-        except ValueError:
-            return False, "ID fiscal deve ser um número"
-
-    @staticmethod
-    def validate_name(value: str, min_length: int = 3) -> Tuple[bool, str]:
-        """Valida nome ou razão social"""
-        if not value or not str(value).strip():
-            return False, "Nome é obrigatório"
-
-        value = str(value).strip()
-        if len(value) < min_length:
-            return False, f"Nome deve ter pelo menos {min_length} caracteres"
-
-        if len(value) > 255:
-            return False, "Nome muito longo (máximo 255 caracteres)"
-
-        # Verifica caracteres inválidos
-        if any(char in value for char in ['<', '>', '"', "'"]):
-            return False, "Nome contém caracteres inválidos"
-
-        return True, ""
-
-    @staticmethod
-    def validate_email(value: str) -> Tuple[bool, str]:
-        """Valida email"""
-        if not value:
-            return True, ""  # Email é opcional
-
-        email_pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-        if not re.match(email_pattern, str(value)):
-            return False, "Email inválido"
-
-        return True, ""
-
-    @staticmethod
-    def validate_phone(value: str) -> Tuple[bool, str]:
-        """Valida telefone"""
-        if not value:
-            return True, ""  # Telefone é opcional
-
-        # Remove caracteres não-numéricos
-        phone_clean = re.sub(r'[^\d+]', '', str(value))
-
-        if len(phone_clean) < 7:
-            return False, "Telefone deve ter pelo menos 7 dígitos"
-
-        if len(phone_clean) > 20:
-            return False, "Telefone muito longo"
-
-        return True, ""
-
-    @staticmethod
-    def validate_currency(value: Any) -> Tuple[bool, str]:
-        """Valida valor monetário"""
-        try:
-            amount = float(value)
-            if amount < 0:
-                return False, "Valor não pode ser negativo"
-            if amount > 999999999.99:
-                return False, "Valor muito grande"
-            return True, ""
-        except (ValueError, TypeError):
-            return False, "Valor monetário inválido"
-
-    @staticmethod
-    def validate_date(value: str, format: str = "%Y-%m-%d") -> Tuple[bool, str]:
-        """Valida data"""
-        from datetime import datetime
-
-        if not value:
-            return False, "Data é obrigatória"
-
-        try:
-            datetime.strptime(str(value), format)
-            return True, ""
-        except ValueError:
-            return False, f"Data inválida (formato esperado: {format})"
-
-    @staticmethod
-    def validate_classification(value: str) -> Tuple[bool, str]:
-        """Valida classificação de confiança"""
-        valid_classifications = [
-            'AAA - Excelente', 'AA - Muito Bom', 'A - Bom',
-            'B - Regular', 'C - Baixo'
-        ]
-
-        if value not in valid_classifications:
-            return False, f"Classificação inválida: {value}"
-
-        return True, ""
-
-    @staticmethod
-    def validate_size(value: str) -> Tuple[bool, str]:
-        """Valida tamanho de empresa"""
-        valid_sizes = ['Pequeno', 'Médio', 'Grande']
-
-        if value not in valid_sizes:
-            return False, f"Tamanho inválido: {value}"
-
-        return True, ""
-
-    @staticmethod
-    def sanitize_sql_string(value: str) -> str:
-        """Remove caracteres perigosos de strings para SQL"""
-        # Nota: Use prepared statements em vez disso quando possível
-        if not value:
-            return ""
-
-        value = str(value)
-        # Remove múltiplos espaços
-        value = ' '.join(value.split())
-        return value
-
-    @staticmethod
-    def validate_anunciante_data(data: dict) -> Tuple[bool, str]:
-        """Valida dados completos de anunciante"""
-
-        # Validar campos obrigatórios
-        required_fields = ['fiscal_id', 'name', 'category', 'size']
-        for field in required_fields:
-            if field not in data or not data[field]:
-                return False, f"Campo obrigatório não preenchido: {field}"
-
-        # Validar cada campo
-        is_valid, error = DataValidator.validate_fiscal_id(data['fiscal_id'])
-        if not is_valid:
-            return False, error
-
-        is_valid, error = DataValidator.validate_name(data['name'])
-        if not is_valid:
-            return False, error
-
-        is_valid, error = DataValidator.validate_size(data['size'])
-        if not is_valid:
-            return False, error
-
-        if 'credit_limit' in data:
-            is_valid, error = DataValidator.validate_currency(data['credit_limit'])
-            if not is_valid:
-                return False, error
-
-        if 'classification' in data:
-            is_valid, error = DataValidator.validate_classification(data['classification'])
-            if not is_valid:
-                return False, error
-
-        return True, ""
-
-
 class ValidationError(Exception):
-    """Exceção personalizada para erros de validação"""
+    """Exceção customizada para erros de validação"""
     pass
+
+
+class CRUDValidator:
+    """Validador centralizado para todos os CRUDS"""
+
+    # Padrões regex
+    EMAIL_PATTERN = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    PHONE_PATTERN = r'^(\+258|0)[1-9]\d{7,8}$'
+    FISCAL_PATTERN = r'^\d{9,12}$'  # 🆕 CORREÇÃO: 9-12 dígitos
+
+    @staticmethod
+    def validate_anunciante(data):
+        """Valida dados de anunciante - VERSÃO CORRIGIDA"""
+        errors = []
+
+        # Nome/Razão Social
+        nome = data.get('nome', '').strip()
+        if not nome or len(nome) < 3:
+            errors.append("Nome deve ter pelo menos 3 caracteres")
+        if len(nome) > 200:
+            errors.append("Nome não pode exceder 200 caracteres")
+
+        # Número de identificação fiscal - 🆕 CORREÇÃO
+        fiscal = data.get('fiscal', '').strip()
+        if not fiscal or not fiscal.isdigit():
+            errors.append("NIF deve conter apenas dígitos numéricos")
+        elif len(fiscal) < 9 or len(fiscal) > 12:  # 🆕 CORREÇÃO: 9-12 dígitos
+            errors.append("NIF deve ter entre 9 e 12 dígitos")
+
+        # Categoria de negócio
+        categoria = data.get('categoria', '').strip()
+        categorias_validas = ['Telecomunicações', 'Varejo', 'Alimentação', 'Saúde', 'Educação', 'Tecnologia', 'Outro']
+        if not categoria or categoria not in categorias_validas:
+            errors.append(f"Categoria inválida. Válidas: {', '.join(categorias_validas)}")
+
+        # Porte
+        porte = data.get('porte', '').strip()
+        if not porte:
+            errors.append("Porte é obrigatório")
+
+        # Endereço
+        endereco = data.get('endereco', '').strip()
+        if not endereco:
+            errors.append("Endereço é obrigatório")
+
+        # Contactos
+        contactos = data.get('contactos', '').strip()
+        if not contactos:
+            errors.append("Contactos são obrigatórios")
+
+        # Representante Legal
+        rep_legal = data.get('rep_legal', '').strip()
+        if not rep_legal:
+            errors.append("Representante legal é obrigatório")
+
+        # Limite de crédito
+        try:
+            limite = float(data.get('limite', 0))
+            if limite < 0:
+                errors.append("Limite de crédito não pode ser negativo")
+            if limite > 10000000:
+                errors.append("Limite de crédito excede o máximo permitido")
+        except:
+            errors.append("Limite de crédito deve ser numérico")
+
+        # Classificação
+        classif = data.get('classif', '').strip()
+        classif_validas = ['Confidencial', 'Público', 'Interno']
+        if not classif or classif not in classif_validas:
+            errors.append(f"Classificação inválida. Válidas: {', '.join(classif_validas)}")
+
+        if errors:
+            raise ValidationError("\n".join(errors))
+
+        return True
+
+    @staticmethod
+    def validate_campanha(data):
+        """Valida dados de campanha - JÁ ESTÁ FUNCIONANDO, MANTIDO"""
+        errors = []
+
+        # Título
+        titulo = data.get('titulo', '').strip()
+        if not titulo or len(titulo) < 3:
+            errors.append("Título deve ter pelo menos 3 caracteres")
+        if len(titulo) > 150:
+            errors.append("Título não pode exceder 150 caracteres")
+
+        # Objetivo
+        objectivo = data.get('objectivo', '').strip()
+        if not objectivo or len(objectivo) < 10:
+            errors.append("Objetivo deve ter pelo menos 10 caracteres")
+
+        # Público-alvo
+        pub_alvo = data.get('pub_alvo', '').strip()
+        if not pub_alvo or len(pub_alvo) < 5:
+            errors.append("Público-alvo deve ter pelo menos 5 caracteres")
+
+        # Orçamento
+        try:
+            orc = float(data.get('orc_alocado', 0))
+            if orc <= 0:
+                errors.append("Orçamento deve ser maior que zero")
+            if orc > 100000000:
+                errors.append("Orçamento excede o máximo permitido")
+        except:
+            errors.append("Orçamento deve ser numérico")
+
+        # Datas
+        try:
+            data_inicio = datetime.strptime(data.get('data_inicio', ''), '%d/%m/%Y')
+            data_termino = datetime.strptime(data.get('data_termino', ''), '%d/%m/%Y')
+
+            if data_termino <= data_inicio:
+                errors.append("Data de término deve ser posterior à data de início")
+
+            if (data_termino - data_inicio).days > 365:
+                errors.append("Campanha não pode durar mais de 365 dias")
+        except:
+            errors.append("Datas inválidas. Use formato DD/MM/YYYY")
+
+        # Anunciante
+        if not data.get('anunciante'):
+            errors.append("Selecione um anunciante")
+
+        if errors:
+            raise ValidationError("\n".join(errors))
+
+        return True
+
+    @staticmethod
+    def validate_espaco(data):
+        """Valida dados de espaço - VERSÃO CORRIGIDA"""
+        errors = []
+
+        # Localização
+        local = data.get('local', '').strip()
+        if not local or len(local) < 3:
+            errors.append("Localização deve ter pelo menos 3 caracteres")
+
+        # Tipo - 🆕 CORREÇÃO COM VALORES CORRETOS
+        tipo = data.get('tipo', '').strip()
+        tipos_validos = ['Painel Digital', 'Espaco em Aplicativo', 'Banner em Site']
+        if not tipo or tipo not in tipos_validos:
+            errors.append(f"Tipo inválido. Válidos: {', '.join(tipos_validos)}")
+
+        # Dimensões
+        dimensoes = data.get('dimensoes', '').strip()
+        if not dimensoes or len(dimensoes) < 2:
+            errors.append("Dimensões inválidas")
+
+        # Preço base - 🆕 CORREÇÃO: campo correto 'preco_base'
+        try:
+            preco = float(data.get('preco_base', 0))
+            if preco <= 0:
+                errors.append("Preço deve ser maior que zero")
+            if preco > 500000:
+                errors.append("Preço excede o máximo permitido")
+        except:
+            errors.append("Preço deve ser numérico")
+
+        # Visibilidade
+        visibilidade = data.get('visibilidade', '').strip()
+        if not visibilidade:
+            errors.append("Visibilidade é obrigatória")
+
+        # Disponibilidade
+        disponibilidade = data.get('disponibilidade', '')
+        valores_validos = ['Disponível', 'Indisponível', 'Em Manutenção']
+        if not disponibilidade or disponibilidade not in valores_validos:
+            errors.append(f"Disponibilidade inválida. Válidas: {', '.join(valores_validos)}")
+
+        # Proprietário
+        proprietario = data.get('proprietario', '').strip()
+        if not proprietario or len(proprietario) < 3:
+            errors.append("Proprietário deve ter pelo menos 3 caracteres")
+
+        if errors:
+            raise ValidationError("\n".join(errors))
+
+        return True
+
+    @staticmethod
+    def validate_peca(data):
+        """Valida dados de peça criativa - VERSÃO CORRIGIDA E SIMPLIFICADA"""
+        errors = []
+
+        # Título
+        titulo = data.get('titulo', '').strip()
+        if not titulo or len(titulo) < 3:
+            errors.append("Título deve ter pelo menos 3 caracteres")
+
+        # Descrição
+        descricao = data.get('descricao', '').strip()
+        if not descricao or len(descricao) < 10:
+            errors.append("Descrição deve ter pelo menos 10 caracteres")
+
+        # Criador
+        criador = data.get('criador', '').strip()
+        if not criador:
+            errors.append("Criador é obrigatório")
+
+        # Status
+        status = data.get('status', '').strip()
+        status_validos = ['Pendente', 'Aprovado', 'Rejeitado', 'Em Revisão']
+        if not status or status not in status_validos:
+            errors.append(f"Status inválido. Válidos: {', '.join(status_validos)}")
+
+        # Classificação
+        try:
+            classif = int(data.get('classif', 0))
+            if classif < 0 or classif > 18:
+                errors.append("Classificação deve ser entre 0 e 18")
+        except:
+            errors.append("Classificação deve ser numérica (0-18)")
+
+        # 🆕 REMOVIDA VALIDAÇÃO DE CAMPOS QUE NÃO EXISTEM NO FORMULÁRIO
+        # (tipo, formato, campanha)
+
+        if errors:
+            raise ValidationError("\n".join(errors))
+
+        return True
+
+    @staticmethod
+    def validate_pagamento(data):
+        """Valida dados de pagamento - VERSÃO CORRIGIDA"""
+        errors = []
+
+        # Preço dinâmico - 🆕 CORREÇÃO: campo correto 'preco_dinam'
+        try:
+            valor = float(data.get('preco_dinam', 0))
+            if valor <= 0:
+                errors.append("Valor deve ser maior que zero")
+            if valor > 10000000:
+                errors.append("Valor excede o máximo permitido")
+        except:
+            errors.append("Valor deve ser numérico")
+
+        # Método
+        metodo = data.get('metodo', '').strip()
+        metodos_validos = ['Transferência Bancária', 'Dinheiro', 'Cheque', 'Cartão de Crédito', 'Outra']
+        if not metodo or metodo not in metodos_validos:
+            errors.append(f"Método inválido. Válidos: {', '.join(metodos_validos)}")
+
+        # Reconciliação
+        reconc = data.get('reconc', '').strip()
+        status_validos = ['Pendente', 'Conciliado', 'Não Conciliado', 'Em Revisão']
+        if not reconc or reconc not in status_validos:
+            errors.append(f"Reconciliação inválida. Válidas: {', '.join(status_validos)}")
+
+        # 🆕 REMOVIDA VALIDAÇÃO DE CAMPANHA (não existe no formulário)
+
+        if errors:
+            raise ValidationError("\n".join(errors))
+
+        return True

@@ -34,7 +34,10 @@ COLORS = {
     # Cores de texto
     'text_primary': '#f0f6fc',
     'text_secondary': '#8b949e',
-    'text_disabled': '#484f58'
+    'text_disabled': '#484f58',
+
+# 🆕 ADICIONE ESTAS NOVAS CORES:
+    'dark_hover': '#4A4A4A',
 }
 
 FONTS = {

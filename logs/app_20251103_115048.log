@@ -1,0 +1,51 @@
+2025-11-03 11:50:48,289 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-03 11:50:48,290 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-03 11:50:48,335 - INC_Publicidade - INFO - [connect:39] - Conexão Oracle estabelecida com sucesso!
+2025-11-03 11:50:48,335 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-03 11:50:48,336 - INC_Publicidade - INFO - [start_application:637] - Iniciando Sistema de Gestão de Publicidade...
+2025-11-03 11:50:48,336 - INC_Publicidade - INFO - [start_application:638] - Conexão Oracle: localhost:1521/XEPDB1
+2025-11-03 11:50:48,543 - INC_Publicidade - INFO - [__init__:27] - SearchEngine inicializado
+2025-11-03 11:50:48,543 - INC_Publicidade - INFO - [integrar_pesquisa:21] - ✅ Motor de pesquisa inicializado com sucesso
+2025-11-03 11:50:48,543 - INC_Publicidade - INFO - [integrar_pesquisa:28] - ✅ Sistema de pesquisa integrado com sucesso
+2025-11-03 11:50:48,543 - INC_Publicidade - INFO - [__init__:151] - ✅ Sistema de pesquisa integrado
+2025-11-03 11:50:48,585 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_interface
+2025-11-03 11:50:48,585 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_sidebar
+2025-11-03 11:50:48,633 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 11:50:48,634 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 11:50:48,634 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 11:50:48,634 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 11:50:48,634 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 11:50:48,634 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 11:50:48,789 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_sidebar
+2025-11-03 11:50:48,789 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_header
+2025-11-03 11:50:48,822 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_header
+2025-11-03 11:50:48,822 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_main_content
+2025-11-03 11:50:48,822 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_main_content
+2025-11-03 11:50:48,822 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_interface
+2025-11-03 11:50:48,822 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 11:50:48,823 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 11:50:48,823 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 11:50:54,597 - INC_Publicidade - INFO - [adicionar_barra_pesquisa_dashboard:68] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 11:50:54,617 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 11:50:54,617 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 11:50:54,617 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 11:50:54,617 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 11:50:54,618 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 11:50:54,618 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 11:50:59,968 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 11:50:59,978 - INC_Publicidade - DEBUG - [execute_query:75] - Query executada e confirmada
+2025-11-03 11:50:59,978 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 11:50:59,978 - INC_Publicidade - INFO - [pesquisa_global:99] - Pesquisa global: 'Vodacom Moçambique' - 0 resultados
+2025-11-03 11:51:00,136 - INC_Publicidade - INFO - [display_search_results:224] - ✅ Exibidos 0 resultados para 'Vodacom Moçambique'
+2025-11-03 11:51:04,413 - INC_Publicidade - INFO - [adicionar_barra_pesquisa_dashboard:68] - ✅ Barra de pesquisa adicionada ao dashboard
+2025-11-03 11:51:04,438 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 11:51:04,439 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 11:51:04,439 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 11:51:04,439 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 11:51:04,439 - INC_Publicidade - DEBUG - [execute_query:71] - Query retornou 1 linhas
+2025-11-03 11:51:04,440 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 11:51:10,044 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 11:51:10,055 - INC_Publicidade - DEBUG - [execute_query:75] - Query executada e confirmada
+2025-11-03 11:51:10,055 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 11:51:10,055 - INC_Publicidade - INFO - [pesquisa_global:99] - Pesquisa global: 'Vodacom 5G Chegou' - 1 resultados
+2025-11-03 11:51:10,238 - INC_Publicidade - INFO - [display_search_results:224] - ✅ Exibidos 1 resultados para 'Vodacom 5G Chegou'

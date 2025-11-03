@@ -1,0 +1,43 @@
+2025-11-03 10:53:24,321 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-03 10:53:24,321 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-03 10:53:24,379 - INC_Publicidade - ERROR - [connect:43] - Erro de conexão Oracle: ORA-12541: TNS:no listener
+2025-11-03 10:53:24,380 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-03 10:53:24,381 - INC_Publicidade - INFO - [start_application:634] - Iniciando Sistema de Gestão de Publicidade...
+2025-11-03 10:53:24,381 - INC_Publicidade - INFO - [start_application:635] - Conexão Oracle: localhost:1521/XEPDB1
+2025-11-03 10:53:24,624 - INC_Publicidade - INFO - [__init__:27] - SearchEngine inicializado
+2025-11-03 10:53:24,624 - INC_Publicidade - INFO - [integrar_pesquisa:21] - ✅ Motor de pesquisa inicializado com sucesso
+2025-11-03 10:53:24,624 - INC_Publicidade - INFO - [integrar_pesquisa:28] - ✅ Sistema de pesquisa integrado com sucesso
+2025-11-03 10:53:24,625 - INC_Publicidade - INFO - [__init__:151] - ✅ Sistema de pesquisa integrado
+2025-11-03 10:53:24,665 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_interface
+2025-11-03 10:53:24,665 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_sidebar
+2025-11-03 10:53:24,714 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 10:53:24,714 - INC_Publicidade - WARNING - [execute_query:57] - Conexão perdida, reconectando...
+2025-11-03 10:53:24,714 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-03 10:53:24,714 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-03 10:53:24,719 - INC_Publicidade - ERROR - [connect:43] - Erro de conexão Oracle: ORA-12541: TNS:no listener
+2025-11-03 10:53:24,719 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-03 10:53:24,720 - INC_Publicidade - ERROR - [execute_query:84] - Erro na execução da query: Falha ao reconectar ao Oracle
+2025-11-03 10:53:24,720 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 10:53:24,720 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 10:53:24,720 - INC_Publicidade - WARNING - [execute_query:57] - Conexão perdida, reconectando...
+2025-11-03 10:53:24,720 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-03 10:53:24,720 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-03 10:53:24,724 - INC_Publicidade - ERROR - [connect:43] - Erro de conexão Oracle: ORA-12541: TNS:no listener
+2025-11-03 10:53:24,724 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-03 10:53:24,725 - INC_Publicidade - ERROR - [execute_query:84] - Erro na execução da query: Falha ao reconectar ao Oracle
+2025-11-03 10:53:24,725 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 10:53:24,943 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_sidebar
+2025-11-03 10:53:24,943 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_header
+2025-11-03 10:53:24,999 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_header
+2025-11-03 10:53:24,999 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: _create_main_content
+2025-11-03 10:53:25,002 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_main_content
+2025-11-03 10:53:25,003 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: _create_interface
+2025-11-03 10:53:25,003 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: execute_query
+2025-11-03 10:53:25,003 - INC_Publicidade - WARNING - [execute_query:57] - Conexão perdida, reconectando...
+2025-11-03 10:53:25,003 - INC_Publicidade - DEBUG - [wrapper:58] - Iniciando: connect
+2025-11-03 10:53:25,003 - INC_Publicidade - INFO - [connect:24] - Iniciando conexão Oracle...
+2025-11-03 10:53:25,010 - INC_Publicidade - ERROR - [connect:43] - Erro de conexão Oracle: ORA-12541: TNS:no listener
+2025-11-03 10:53:25,010 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: connect
+2025-11-03 10:53:25,010 - INC_Publicidade - ERROR - [execute_query:84] - Erro na execução da query: Falha ao reconectar ao Oracle
+2025-11-03 10:53:25,010 - INC_Publicidade - DEBUG - [wrapper:61] - Sucesso: execute_query
+2025-11-03 10:53:25,010 - INC_Publicidade - WARNING - [_verify_connection:300] - Conexão Oracle não disponível

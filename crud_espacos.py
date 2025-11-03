@@ -176,7 +176,8 @@ class EspacosCRUD:
 
         label = ctk.CTkLabel(form_frame, text="Tipo de Espaço:*", font=("Arial", 12, "bold"), text_color=COLORS['text_primary'])
         label.grid(row=row, column=0, padx=20, pady=10, sticky="w")
-        fields['tipo'] = ctk.CTkComboBox(form_frame, values=['Billboard', 'Digital Screen', 'Rádio', 'Online', 'Impressa', 'Outro'], width=350, height=35)
+        # SUBSTITUA POR:
+        fields['tipo'] = ctk.CTkComboBox(form_frame, values=['Painel Digital', 'Espaco em Aplicativo', 'Banner em Site'], width=350, height=35)
         fields['tipo'].grid(row=row, column=1, padx=20, pady=10, sticky="w")
         row += 1
 
@@ -253,7 +254,7 @@ class EspacosCRUD:
                 'dimensoes': fields['dimensoes'].get(),
                 'resolucao': fields['resolucao'].get(),
                 'visibilidade': fields['visibilidade'].get(),
-                'preco_base': fields['preco_base'].get(),
+                'preco_base': fields['preco_base'].get(),  # 🆕 CORREÇÃO: campo correto
                 'disponibilidade': fields['disponibilidade'].get(),
                 'proprietario': fields['proprietario'].get()
             }
@@ -262,9 +263,10 @@ class EspacosCRUD:
 
             if mode == 'create':
                 query = """
-                INSERT INTO Espaco_dados (Local_fis_dig, Tipo, Dimensoes, Resolucao, Visibilidade, Preco_base, Disponibilidade, Proprietario)
-                VALUES (:local, :tipo, :dim, :res, :vis, :preco, :disp, :prop)
-                """
+                        INSERT INTO Espaco_dados (Id_espaco, Local_fis_dig, Tipo, Dimensoes, Resolucao, Visibilidade,
+                                                  Preco_base, Disponibilidade, Proprietario)
+                        VALUES (seq_espaco.NEXTVAL, :local, :tipo, :dim, :res, :vis, :preco, :disp, :prop) \
+                        """
                 params = {
                     'local': data['local'],
                     'tipo': data['tipo'],
@@ -276,13 +278,21 @@ class EspacosCRUD:
                     'prop': data['proprietario']
                 }
                 self.db.execute_query(query, params, fetch=False)
-                messagebox.showinfo("Sucesso", "Espaço criado com sucesso!")
+                messagebox.showinfo("Sucesso", "✅ Espaço criado com sucesso usando SEQUENCE!")
+
             else:
                 query = """
-                UPDATE Espaco_dados SET Local_fis_dig = :local, Tipo = :tipo, Dimensoes = :dim,
-                Resolucao = :res, Visibilidade = :vis, Preco_base = :preco, Disponibilidade = :disp,
-                Proprietario = :prop WHERE Id_espaco = :id
-                """
+                        UPDATE Espaco_dados \
+                        SET Local_fis_dig   = :local, \
+                            Tipo            = :tipo, \
+                            Dimensoes       = :dim, \
+                            Resolucao       = :res, \
+                            Visibilidade    = :vis, \
+                            Preco_base      = :preco, \
+                            Disponibilidade = :disp, \
+                            Proprietario    = :prop \
+                        WHERE Id_espaco = :id \
+                        """
                 params = {
                     'id': id_espaco,
                     'local': data['local'],
@@ -290,7 +300,7 @@ class EspacosCRUD:
                     'dim': data['dimensoes'],
                     'res': data['resolucao'] or None,
                     'vis': data['visibilidade'],
-                    'preco': float(data['preco_base']),
+                    'preco': float(data['preco_base']),  # 🆕 CORREÇÃO: campo correto
                     'disp': data['disponibilidade'],
                     'prop': data['proprietario']
                 }
